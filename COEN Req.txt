@@ -1,0 +1,17 @@
+COEN 10 Introduction to Programming
+COEN 11 Advanced Programming
+COEN 12 Abstract Data Types and Data Structures
+COEN 19 Discrete Mathematics
+COEN 20 Embedded Systems
+COEN 21 Logic Design
+COEN 70 Formal Specification and Advanced Data Structures
+COEN 122 Computer Architecture
+COEN 146 Computer Networks
+COEN 171 Design and Implementation of Programming Languages
+COEN 174 Software Engineering
+COEN 175 Formal Language Theory and Compiler Construction
+COEN 177 Operating Systems
+COEN 179 Theory of Algorithms
+COEN 194 Design Project I
+COEN 195 Design Project II
+COEN 196 Design Project III

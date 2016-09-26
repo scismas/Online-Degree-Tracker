@@ -1,0 +1,28 @@
+12 Units
+L&L is 5 units, unspecified is 4
+
+COEN 120 Real Time Systems L&L
+COEN 123 Mechatronics L&L
+COEN 127 Advanced Logic Design L&L
+COEN 129 Current Topics in Computer Engineering
+COEN 145 Introduction to Parallel Programming L&L
+COEN 148 Computer Graphics System L&L
+COEN 150 Introduction to Information Security
+COEN 152 Introduction to Computer Forensics L&L
+COEN 160 OO Analysis, Design, & Programming L&L
+COEN 161 Web Programming I L&L
+COEN 162 Web Infrastructure 
+COEN 163 Web Usability L&L
+COEN 164 Advanced Web Development L&L
+COEN 165 Intro 3D Animation & Modeling
+COEN 166 Artificial Intelligence
+COEN 168 Mobile Application Development L&L
+COEN 169 Web Information Management
+COEN 172 Structure and Interpretation of Computer Programs L&L
+COEN 173 Logic Programming L&L
+COEN 178 Introduction to Database Systems L&L
+COEN 180 Introduction to Information Storage
+
+ELEN 115 Electronic Circuits I L&L
+ELEN 133 Digital Signal Processing L&L
+ELEN 134 Applications of Signal Processing L&L

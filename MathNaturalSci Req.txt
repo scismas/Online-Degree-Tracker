@@ -1,0 +1,13 @@
+CHEM 11 General Chemistry I
+
+MATH 11 Calculus and Analytic Geometry I
+MATH 12 Calculus and Analytic Geometry II
+MATH 13 Calculus and Analytic Geometry III
+MATH 14 Calculus and Analytic Geometry IV
+
+PHYS 31 Physics for Scientists and Engineers I
+PHYS 32 Physics for Scientists and Engineers II
+PHYS 33 Physics for Scientists and Engineers III
+
+AMTH 106 Differential Equations
+AMTH 108 Probability and Statistics

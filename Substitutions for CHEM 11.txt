@@ -1,0 +1,4 @@
+BIOL 18 Exploring Biotechnology
+CHEM 1 Chemistry and the Environment
+ENVS 21 Introduction to Applied Ecology
+PHYS 34 Physics for Scientists and Engineers IV

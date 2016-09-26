@@ -1,0 +1,2 @@
+ELEN 50 Electric Circuits I
+ELEN 153 Digital Integrated Circuit Design

@@ -1,0 +1,3 @@
+MATH 53 Linear Algebra
+MATH 166 Numerical Analysis
+AMTH 118 Numerical Methods
