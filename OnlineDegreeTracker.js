@@ -9,7 +9,7 @@ var diversity = ["ANTH 157", "ARTH 143", "ARTH 185", "COMM 107A", "ENGL 38", "EN
 var elen = ["ELEN 50", "ELEN 153"];
 var elsj = ["ANTH 3", "BIOL 188", "BUSN 151B", "BUSN 195EL", "COMM 107A", "COMM 141B", "ELSJ 22", "ELSJ 23", "ELSJ 135", "ENGR 111", "ENVS 131", "LBST 106", "MGMT 8", "PSYC 115EL", "PSYC 185EL", "SCTR 128", "SOCI 30", "SPAN 21EL", "TESP 46"];
 var engr = ["ENGR 1"];
-var cars = ["Saab", "Volvo", "BMW"];
+var ethics = ["ENGR 19", "MGMT 6", "PHIL 5", "PHIL 6", "PHIL 7A", "PHIL 9", "PHIL 10", "WGST 189"];
 
 
 function myFunction()
