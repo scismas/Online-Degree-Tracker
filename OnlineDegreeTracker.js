@@ -19,7 +19,10 @@ var amth106 = ["AMTH 106", "CHEM 12", "BIOL 21", "MATH 101", "MATH 102", "MATH 1
 var chem11 = ["BIOL 18", "CHEM 1", "ENVS 21", "PHYS 34"];
 var upperDiv = ["COEN 120", "COEN 123", "COEN 127", "COEN 129", "COEN 145", "COEN 148", "COEN 150", "COEN 152", "COEN 160", "COEN 161", "COEN 162", "COEN 163", "COEN 164", "COEN 165", "COEN 166", "COEN 168", "COEN 169", "COEN 172", "COEN 173", "COEN 178", "COEN 180", "ELEN 115", "ELEN 133", "ELEN 134"];
 
-
+var engl181 = ["ENGL 181"];
+var coen194 = ["COEN 194", "ENGR 194"];
+var coen195 = ["COEN 195", "ENGR 195"];
+var coen196 = ["COEN 196", "ENGR 196"];
 
 function myFunction()
 {
