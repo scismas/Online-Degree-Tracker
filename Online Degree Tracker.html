@@ -18,7 +18,7 @@
 		<div>
 			<h5>Enter Class:</h5>
 			<form>
-				<input type="text" name="firstname">
+				<input type="text" name="addField">
 				
 			</form>
 		</div>
@@ -26,16 +26,18 @@
 		<div>
 			<h5>Remove Class:</h5>
 			<form>
-				<input type="text" name="firstname">
+				<input id ="remove" placeholder="&quot;COEN 10&quot;" type=text>
+				<input type=button onclick="test()" value="Remove Course" name="button1"/>
 			</form>
 		</div>
-		<form>
-			<input id="input" type=text>
-			 <input type=button onclick="myFunction()" value="Add Number"/>
+			<form>
+				<input id="input" placeholder="Enter a course example &quot;COEN 10&quot;" type=text>
+			 	<input type=button onclick="addCourse()" value="Add Course" name="button1"/>
 			</form>
+			
 
-		 <div id="box" style="border:1px solid black;width:150px;height:150px;overflow:auto"> 
-			</div>
+		 <div id="box" style="border:1px solid black;width:150px;height:500px;overflow:auto"> 
+		</div>
 		<h4>DEGREE PROGRESS</h4>
 		<h4>Major</h4>
 	<table>
@@ -51,119 +53,55 @@
 			</tr>
 			<tr>
 				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td id="COEN 10">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 11</td>
+				<td id="COEN 11">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 12</td>
+				<td id="COEN 12">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 19</td>
+				<td id="COEN 19">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 20</td>
+				<td id="COEN 20">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 21</td>
+				<td id="COEN 21">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 70</td>
+				<td id="COEN 70">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 122</td>
+				<td id="COEN 122">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 146</td>
+				<td id="COEN 146">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 171</td>
+				<td id="COEN 171">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 174</td>
+				<td id="COEN 174">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 175</td>
+				<td id="COEN 175">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
-			</tr>
-		</table>
-		</th>
-		<th>
-		<table style="width:25%">
-			<tr>
-				<th>Requirement</th>
-				<th>Fulfilled?</th> 
-			</tr>
-			<tr>
-				<td>ENGR 1</td>
-				<td>NO!</td> 
-			</tr>
-			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
-			</tr>
-			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
-			</tr>
-			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
-			</tr>
-			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
-			</tr>
-			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
-			</tr>
-			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
-			</tr>
-			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
-			</tr>
-			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
-			</tr>
-			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
-			</tr>
-			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
-			</tr>
-			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
-			</tr>
-			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
-			</tr>
-			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 177</td>
+				<td id="COEN 177">NO!</td> 
 			</tr>
 		</table>
 		</th>
@@ -174,32 +112,96 @@
 				<th>Fulfilled?</th> 
 			</tr>
 			<tr>
-				<td>ENGR 1</td>
-				<td>NO!</td> 
+				<td>COEN 179</td>
+				<td id="COEN 179">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 194</td>
+				<td id="COEN 194">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 195</td>
+				<td id="COEN 195">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>COEN 196</td>
+				<td id="COEN 196">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>MATH 11</td>
+				<td id="MATH 11">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>MATH 12</td>
+				<td id="MATH 12">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>MATH 13</td>
+				<td id="MATH 13">NO!</td> 
+			</tr>
+			<tr>
+				<td>MATH 14</td>
+				<td id="MATH 14">NO!</td> 
+			</tr>
+			<tr>
+				<td>MATH 53</td>
+				<td id="MATH 53">NO!</td> 
+			</tr>
+			<tr>
+				<td>PHYS 31</td>
+				<td id="PHYS 31">NO!</td> 
+			</tr>
+			<tr>
+				<td>PHYS 32</td>
+				<td	id="PHYS 32">NO!</td> 
+			</tr>
+			<tr>
+				<td>PHYS 33</td>
+				<td id="PHYS 33">NO!</td> 
+			</tr>
+			<tr>
+				<td>ELEN 50</td>
+				<td	id="ELEN 50">NO!</td> 
+			</tr>
+			<tr>
+				<td>ELEN 153</td>
+				<td id="ELEN 153">NO!</td> 
+			</tr>
+		</table>
+		</th>
+		<th>
+		<table style="width:25%">
+			<tr>
+				<th>Requirement</th>
+				<th>Fulfilled?</th> 
+			</tr>
+			<tr>
+				<td>CHEM 11</td>
+				<td id="CHEM 11">NO!</td> 
+			</tr>
+			<tr>
+				<td>AMTH 106</td>
+				<td id="AMTH 106">NO!</td> 
+			</tr>
+			<tr>
+				<td>AMTH 108</td>
+				<td id="AMTH 108">NO!</td> 
+			</tr>
+			<tr>
+				<td>T.E. I</td>
+				<td id="T.E. I">NO!</td> 
+			</tr>
+			<tr>
+				<td>T.E. II</td>
+				<td id="T.E. II">NO!</td> 
+			</tr>
+			<tr>
+				<td>T.E. III</td>
+				<td id="T.E. III">NO!</td> 
+			</tr>
+			<tr>
+				<td>ENGL 181</td>
+				<td id="ENGL 181">NO!</td> 
 		
 		
 		</table>
@@ -223,28 +225,28 @@
 			<th>Fulfilled?</th> 
 		</tr>
 		<tr>
-			<td>ENGR 1</td>
-			<td>NO!</td> 
+			<td>CTW I</td>
+			<td id="CTW I">NO!</td> 
 		</tr>
 		<tr>
-			<td>COEN 10</td>
-			<td>NO!</td> 
+			<td>CTW II</td>
+			<td id="CTW II">NO!</td> 
 		</tr>
 		<tr>
-			<td>COEN 10</td>
-			<td>NO!</td> 
+			<td>C&amp;I I</td>
+			<td id="CandI I">NO!</td> 
 		</tr>
 		<tr>
-			<td>COEN 10</td>
-			<td>NO!</td> 
+			<td>C&amp;I II</td>
+			<td id="CandI II">NO!</td> 
 		</tr>
 		<tr>
-			<td>COEN 10</td>
-			<td>NO!</td> 
+			<td>C&amp;I III</td>
+			<td id="CandI III">NO!</td> 
 		</tr>
 		<tr>
-			<td>COEN 10</td>
-			<td>NO!</td> 
+			<td>DIVERSITY</td>
+			<td id="DIVERSITY">NO!</td> 
 		</tr>
 	</table>
 		</th>
@@ -255,28 +257,28 @@
 				<th>Fulfilled?</th> 
 			</tr>
 			<tr>
-				<td>ENGR 1</td>
-				<td>NO!</td> 
+				<td>SOC SCI</td>
+				<td id="SOC SCI">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>ETHICS</td>
+				<td id="ETHICS">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>ELSJ</td>
+				<td id="ELSJ">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>RTC I</td>
+				<td id="RTC I">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>RTC II</td>
+				<td id="RTC II">NO!</td> 
 			</tr>
 			<tr>
-				<td>COEN 10</td>
-				<td>NO!</td> 
+				<td>RTC III</td>
+				<td id="RTC III">NO!</td> 
 			</tr>
 		</table>
 		</th>
