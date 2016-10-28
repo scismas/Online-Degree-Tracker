@@ -1,4 +1,4 @@
-var number = [];
+var courses = [];
 var advancedWriting = ["ENGL 181"];
 var CI1 = ["ANTH 11A", "ARTH 11A", "ARTH 11H", "CLAS 11A", "ENGL 11A", "ENVS 11A", "HIST 11A", "HIST 11H", "ITAL 11A", "MUSC 11A", "PHIL 11A", "SOCI 11A", "THTR 11A", "WGST 11A"];
 var CI2 = ["ANTH 12A", "ARTH 12A","CLAS 12A","ENGL 12A","ENVS 12A","HIST 12A","HIST 12H","ITAL 12A","MUSC 12A","PHIL 12A","SOCI 12A","THTR 12A","WGST 12A"];
@@ -19,14 +19,82 @@ var amth106 = ["AMTH 106", "CHEM 12", "BIOL 21", "MATH 101", "MATH 102", "MATH 1
 var chem11 = ["BIOL 18", "CHEM 1", "ENVS 21", "PHYS 34"];
 var upperDiv = ["COEN 120", "COEN 123", "COEN 127", "COEN 129", "COEN 145", "COEN 148", "COEN 150", "COEN 152", "COEN 160", "COEN 161", "COEN 162", "COEN 163", "COEN 164", "COEN 165", "COEN 166", "COEN 168", "COEN 169", "COEN 172", "COEN 173", "COEN 178", "COEN 180", "ELEN 115", "ELEN 133", "ELEN 134"];
 
-var engl181 = ["ENGL 181"];
-var coen194 = ["COEN 194", "ENGR 194"];
-var coen195 = ["COEN 195", "ENGR 195"];
-var coen196 = ["COEN 196", "ENGR 196"];
 
-function myFunction()
-{
-  var x = document.getElementById("box");
-  number.push(document.getElementById("input").value);
-  x.innerHTML = number.join('<br/>');
+function test(){
+  var x = document.getElementById("remove").value;
+  var i = 0;
+  var size = courses.length;
+ // alert(x);
+ // alert(size);
+/* while(size > 0)
+    if (x === courses[i]) {
+      }
+    i++;
+    }
+  
 }
+*/
+}
+/*
+function removeCourse() {
+  alert(Called);
+  var x = document.getElementById("remove").value);
+  var i = courses.indexOf(x);
+  
+  if (i > -1) {
+    courses.splice(i, 1);
+  }
+}
+
+*/
+//Would like case insenitive
+function addCourse(){
+  var x = document.getElementById("box");
+  courses.push(document.getElementById("input").value);
+ // x.innerHTML = courses.join('<br/>');
+ // document.getElementById('COEN10').style.display='none'
+  //document.getElementById('COEN10').style.display='text'
+  var arrayLength = courses.length;
+  x.innerHTML = "";
+  for (var i = 0; i < arrayLength; i++) {
+    x.innerHTML += courses[i] + "<br>";
+    generate(courses[i]);
+  }
+}
+
+function generate(x){
+  
+  if(x == "ENGL 181"){ document.getElementById("ENGL 181").innerHTML = "YES!";}
+  else if(x == "COEN 10"){ document.getElementById("COEN 10").innerHTML = "YES!";}
+  else if(x == "COEN 11"){ document.getElementById("COEN 11").innerHTML = "YES!";}
+  else if(x == "COEN 12"){ document.getElementById("COEN 12").innerHTML = "YES!";}
+  else if(x == "COEN 19"){document.getElementById("COEN 19").innerHTML = "YES!";}
+  else if(x == "COEN 20"){document.getElementById("COEN 20").innerHTML = "YES!";}
+  else if(x == "COEN 21"){document.getElementById("COEN 21").innerHTML = "YES!";}
+  else if(x == "COEN 12"){document.getElementById("COEN 12").innerHTML = "YES!";}
+  else if(x == "COEN 70"){document.getElementById("COEN 122").innerHTML = "YES!";}
+  else if(x == "COEN 146"){document.getElementById("COEN 146").innerHTML = "YES!";}
+  else if(x == "COEN 171"){document.getElementById("COEN 171").innerHTML = "YES!";}
+  else if(x == "COEN 174"){document.getElementById("COEN 174").innerHTML = "YES!";}
+  else if(x == "COEN 175"){document.getElementById("COEN 175").innerHTML = "YES!";}
+  else if(x == "COEN 177"){document.getElementById("COEN 177").innerHTML = "YES!";}
+  else if(x == "COEN 179"){document.getElementById("COEN 179").innerHTML = "YES!";}
+  else if(x == "COEN 194"){document.getElementById("COEN 194").innerHTML = "YES!";}
+  else if(x == "COEN 195"){document.getElementById("COEN 195").innerHTML = "YES!";}
+  else if(x == "COEN 196"){document.getElementById("COEN 196").innerHTML = "YES!";}
+  else if(x == "MATH 11"){document.getElementById("MATH 11").innerHTML = "YES!";}
+  else if(x == "MATH 12"){document.getElementById("MATH 12").innerHTML = "YES!";}
+  else if(x == "MATH 13"){document.getElementById("MATH 13").innerHTML = "YES!";}
+  else if(x == "MATH 14"){document.getElementById("MATH 14").innerHTML = "YES!";}
+  else if(x == "MATH 53"){document.getElementById("MATH 53").innerHTML = "YES!";}
+  else if(x == "MATH 106"){document.getElementById("MATH 106").innerHTML = "YES!";}//Can be fulfilled with 
+  else if(x == "MATH 108"){document.getElementById("MATH 108").innerHTML = "YES!";}
+  else if(x == "PHYS 31"){document.getElementById("PHYS 31").innerHTML = "YES!";}
+  else if(x == "PHYS 32"){document.getElementById("PHYS 32").innerHTML = "YES!";}
+  else if(x == "PHYS 33"){document.getElementById("PHYS 33").innerHTML = "YES!";}
+  else if(x == "ELEN 50"){document.getElementById("ELEN 50").innerHTML = "YES!";}
+  else if(x == "ELEN 153"){document.getElementById("ELEN 153").innerHTML = "YES!";}
+ 
+}
+  
+
