@@ -47,7 +47,7 @@ function removeThis(){
     courses.splice(d,1);
     populate();
     reset();
-    needThis();
+    populate();
   }
   else 
   {
