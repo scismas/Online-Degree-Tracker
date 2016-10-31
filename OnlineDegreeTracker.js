@@ -79,6 +79,7 @@ function reset(){
 }
 function populate()
 {
+  technicalElectives = [];
   var x = document.getElementById("box");
   var arrayLength = courses.length;
   x.innerHTML = "";
