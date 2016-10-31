@@ -229,14 +229,7 @@ function loadCookieArray()
   if (document.cookie.length > 0)
   {
     courses = JSON.parse(getCookie("cookieCourse"));
-    var x = document.getElementById("box");
-    var arrayLength = courses.length;
-    x.innerHTML = "";
-    for (var i = 0; i < arrayLength; i++) 
-    {
-      x.innerHTML += courses[i] + "<br>";
-      generate(courses[i]);
-    }
+    populate();
   }
   return "";
 
