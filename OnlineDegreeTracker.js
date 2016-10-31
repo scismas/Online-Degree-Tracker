@@ -45,18 +45,13 @@ function removeThis(){
   if(courses.indexOf(y) >= 0)
   {
     courses.splice(d,1);
-    var x = document.getElementById("box");
-    var arrayLength = courses.length;
-    x.innerHTML = "";
-    for (var i = 0; i < arrayLength; i++) {
-      x.innerHTML += courses[i] + "<br>";
-      generate(courses[i]);
-    }
-  reset();
-  needThis();
+    populate();
+    reset();
+    needThis();
   }
-  else {
-    alert();
+  else 
+  {
+    alert("Cannot Remove");
   }
 }
 
@@ -67,10 +62,10 @@ function addCourse(){
     return;
   }
   courses.push(document.getElementById("input").value);
-  needThis();
+  populate();
   }
 
-function needThis(){
+function populate(){
   technicalElectives = [];
   var x = document.getElementById("box");
   var arrayLength = courses.length;
@@ -92,6 +87,17 @@ function reset(){
  
   alert("reset");
   
+}
+function populate()
+{
+  var x = document.getElementById("box");
+  var arrayLength = courses.length;
+  x.innerHTML = "";
+  for (var i = 0; i < arrayLength; i++) {
+    x.innerHTML += courses[i] + "<br>";
+    generate(courses[i]);
+  }
+  createCookie("cookieCourse", courses, 365);
 }
 
 function generate(x){
@@ -165,7 +171,8 @@ function generate(x){
     }
   }
 
-  if(elective == 0 ){
+  if(elective == 0 )
+  {
     fillTable(x);
   }
 }
