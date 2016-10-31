@@ -182,8 +182,10 @@ function fillTable(x){
   {
     document.getElementById("electiveTable").deleteRow(j);
   }
-  electives = [];
-  electives.push(x);
+  if (electives.indexOf(x) != -1)
+  {
+    electives.push(x); 
+  }
   var table = document.getElementById("electiveTable");
   for(j = 0; j < electives.length; j++){
   var row = table.insertRow(0);
