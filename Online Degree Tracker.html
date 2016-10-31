@@ -18,8 +18,8 @@
 		<div>
 			<h5>Enter Class:</h5>
 			<form>
-				<input type="text" name="addField">
-				
+				<input id="input" placeholder="&quot;COEN 10&quot;" type=text class=inputText maxlength="8"/>
+			 	<input type=button id="inputButton" onclick="addCourse()" value="Add Course" name="button1"/>
 			</form>
 		</div>
 		
@@ -30,10 +30,7 @@
 				<input type=button id="removeButton" onclick="removeThis()" value="Remove Course" name="button2"/>
 			</form>
 		</div>
-			<form>
-				<input id="input" placeholder="Enter a course example &quot;COEN 10&quot;" type=text class=inputText maxlength="8"/>
-			 	<input type=button id="inputButton" onclick="addCourse()" value="Add Course" name="button1"/>
-			</form>
+			
 			
 
 		 <div id="box" style="border:1px solid black;width:150px;height:500px;overflow:auto"> 
