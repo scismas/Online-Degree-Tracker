@@ -45,7 +45,6 @@ function removeThis(){
   if(courses.indexOf(y) >= 0)
   {
     courses.splice(d,1);
-    populate();
     reset();
     populate();
   }
