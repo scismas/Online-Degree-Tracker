@@ -65,17 +65,6 @@ function addCourse(){
   populate();
   }
 
-function populate(){
-  technicalElectives = [];
-  var x = document.getElementById("box");
-  var arrayLength = courses.length;
-  x.innerHTML = "";
-  for (var i = 0; i < arrayLength; i++) {
-    x.innerHTML += courses[i] + "<br>";
-    generate(courses[i]);
-  }
-  createCookie("cookieCourse", courses, 365);
-}
 
 function reset(){
   var x = document.getElementsByName("requirement");
@@ -182,10 +171,8 @@ function fillTable(x){
   {
     document.getElementById("electiveTable").deleteRow(j);
   }
-  if (electives.indexOf(x) != -1)
-  {
-    electives.push(x); 
-  }
+  electives = [];
+  electives.push(x);
   var table = document.getElementById("electiveTable");
   for(j = 0; j < electives.length; j++){
   var row = table.insertRow(0);
