@@ -80,6 +80,12 @@ function reset(){
 function populate()
 {
   technicalElectives = [];
+  var t = electives.length;
+  for(var j = 0; j < t; j++)
+  {
+    document.getElementById("electiveTable").deleteRow(0);
+  }
+  electives = [];
   var x = document.getElementById("box");
   var arrayLength = courses.length;
   x.innerHTML = "";
@@ -167,12 +173,7 @@ function generate(x){
   }
 }
 function fillTable(x){
-  var i = electives.length;
-  for(var j = 0; j < i; j++)
-  {
-    document.getElementById("electiveTable").deleteRow(j);
-  }
-  electives = [];
+  
   electives.push(x);
   var table = document.getElementById("electiveTable");
   for(j = 0; j < electives.length; j++){
