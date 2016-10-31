@@ -11,8 +11,7 @@
 		<script src="OnlineDegreeTracker.js"></script>
 		<title>COEN Planning</title>
 	</head>
-	<body onload="loadCookieArray(); generate(">
-
+	<body onload="loadCookieArray(); generate()">
 		<h4>Online Degree Tracker</h4>
 		<h5>Designed for SCU COEN majors</h5>
 		
@@ -27,13 +26,13 @@
 		<div>
 			<h5>Remove Class:</h5>
 			<form>
-				<input id ="remove" placeholder="&quot;COEN 10&quot;" type=text>
-				<input type=button onclick="test()" value="Remove Course" name="button1"/>
+				<input id="removeMe" placeholder="&quot;COEN 10&quot;" type=text class=inputText maxlength="8"/>
+				<input type=button id="removeButton" onclick="removeThis()" value="Remove Course" name="button2"/>
 			</form>
 		</div>
 			<form>
-				<input id="input" placeholder="Enter a course example &quot;COEN 10&quot;" type=text>
-			 	<input type=button onclick="addCourse()" value="Add Course" name="button1"/>
+				<input id="input" placeholder="Enter a course example &quot;COEN 10&quot;" type=text class=inputText maxlength="8"/>
+			 	<input type=button id="inputButton" onclick="addCourse()" value="Add Course" name="button1"/>
 			</form>
 			
 
@@ -50,59 +49,59 @@
 			</tr>
 			<tr>
 				<td>ENGR 1</td>
-				<td>NO!</td> 
+				<td name="requirement" id="ENGR 1">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 10</td>
-				<td id="COEN 10">NO!</td> 
+				<td name="requirement" id="COEN 10">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 11</td>
-				<td id="COEN 11">NO!</td> 
+				<td name="requirement" id="COEN 11">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 12</td>
-				<td id="COEN 12">NO!</td> 
+				<td name="requirement" id="COEN 12">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 19</td>
-				<td id="COEN 19">NO!</td> 
+				<td name="requirement" id="COEN 19">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 20</td>
-				<td id="COEN 20">NO!</td> 
+				<td name="requirement" id="COEN 20">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 21</td>
-				<td id="COEN 21">NO!</td> 
+				<td name="requirement" id="COEN 21">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 70</td>
-				<td id="COEN 70">NO!</td> 
+				<td name="requirement" id="COEN 70">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 122</td>
-				<td id="COEN 122">NO!</td> 
+				<td name="requirement" id="COEN 122">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 146</td>
-				<td id="COEN 146">NO!</td> 
+				<td name="requirement" id="COEN 146">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 171</td>
-				<td id="COEN 171">NO!</td> 
+				<td name="requirement" id="COEN 171">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 174</td>
-				<td id="COEN 174">NO!</td> 
+				<td name="requirement" id="COEN 174">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 175</td>
-				<td id="COEN 175">NO!</td> 
+				<td name="requirement" id="COEN 175">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 177</td>
-				<td id="COEN 177">NO!</td> 
+				<td name="requirement" id="COEN 177">NO!</td> 
 			</tr>
 		</table>
 		</th>
@@ -114,59 +113,59 @@
 			</tr>
 			<tr>
 				<td>COEN 179</td>
-				<td id="COEN 179">NO!</td> 
+				<td name="requirement" id="COEN 179">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 194</td>
-				<td id="COEN 194">NO!</td> 
+				<td name="requirement" id="COEN 194">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 195</td>
-				<td id="COEN 195">NO!</td> 
+				<td name="requirement" id="COEN 195">NO!</td> 
 			</tr>
 			<tr>
 				<td>COEN 196</td>
-				<td id="COEN 196">NO!</td> 
+				<td name="requirement" id="COEN 196">NO!</td> 
 			</tr>
 			<tr>
 				<td>MATH 11</td>
-				<td id="MATH 11">NO!</td> 
+				<td name="requirement" id="MATH 11">NO!</td> 
 			</tr>
 			<tr>
 				<td>MATH 12</td>
-				<td id="MATH 12">NO!</td> 
+				<td name="requirement" id="MATH 12">NO!</td> 
 			</tr>
 			<tr>
 				<td>MATH 13</td>
-				<td id="MATH 13">NO!</td> 
+				<td name="requirement" id="MATH 13">NO!</td> 
 			</tr>
 			<tr>
 				<td>MATH 14</td>
-				<td id="MATH 14">NO!</td> 
+				<td name="requirement" id="MATH 14">NO!</td> 
 			</tr>
 			<tr>
 				<td>MATH 53</td>
-				<td id="MATH 53">NO!</td> 
+				<td name="requirement" id="MATH 53">NO!</td> 
 			</tr>
 			<tr>
 				<td>PHYS 31</td>
-				<td id="PHYS 31">NO!</td> 
+				<td name="requirement" id="PHYS 31">NO!</td> 
 			</tr>
 			<tr>
 				<td>PHYS 32</td>
-				<td	id="PHYS 32">NO!</td> 
+				<td	name="requirement" id="PHYS 32">NO!</td> 
 			</tr>
 			<tr>
 				<td>PHYS 33</td>
-				<td id="PHYS 33">NO!</td> 
+				<td name="requirement" id="PHYS 33">NO!</td> 
 			</tr>
 			<tr>
 				<td>ELEN 50</td>
-				<td	id="ELEN 50">NO!</td> 
+				<td	name="requirement" id="ELEN 50">NO!</td> 
 			</tr>
 			<tr>
 				<td>ELEN 153</td>
-				<td id="ELEN 153">NO!</td> 
+				<td name="requirement" id="ELEN 153">NO!</td> 
 			</tr>
 		</table>
 		</th>
@@ -178,31 +177,31 @@
 			</tr>
 			<tr>
 				<td>CHEM 11</td>
-				<td id="CHEM 11">NO!</td> 
+				<td name="requirement" id="CHEM 11">NO!</td> 
 			</tr>
 			<tr>
 				<td>AMTH 106</td>
-				<td id="AMTH 106">NO!</td> 
+				<td name="requirement" id="AMTH 106">NO!</td> 
 			</tr>
 			<tr>
 				<td>AMTH 108</td>
-				<td id="AMTH 108">NO!</td> 
+				<td name="requirement" id="AMTH 108">NO!</td> 
 			</tr>
 			<tr>
 				<td>T.E. I</td>
-				<td id="T.E. I">NO!</td> 
+				<td name="requirement" id="T.E. I">NO!</td> 
 			</tr>
 			<tr>
 				<td>T.E. II</td>
-				<td id="T.E. II">NO!</td> 
+				<td name="requirement" id="T.E. II">NO!</td> 
 			</tr>
 			<tr>
 				<td>T.E. III</td>
-				<td id="T.E. III">NO!</td> 
+				<td name="requirement" id="T.E. III">NO!</td> 
 			</tr>
 			<tr>
 				<td>ENGL 181</td>
-				<td id="ENGL 181">NO!</td> 
+				<td name="requirement" id="ENGL 181">NO!</td> 
 		
 		
 		</table>
@@ -227,27 +226,27 @@
 		</tr>
 		<tr>
 			<td>CTW I</td>
-			<td id="CTW I">NO!</td> 
+			<td name="requirement" id="CTW I">NO!</td> 
 		</tr>
 		<tr>
 			<td>CTW II</td>
-			<td id="CTW II">NO!</td> 
+			<td name="requirement" id="CTW II">NO!</td> 
 		</tr>
 		<tr>
 			<td>C&amp;I I</td>
-			<td id="CandI I">NO!</td> 
+			<td name="requirement" id="CandI I">NO!</td> 
 		</tr>
 		<tr>
 			<td>C&amp;I II</td>
-			<td id="CandI II">NO!</td> 
+			<td name="requirement" id="CandI II">NO!</td> 
 		</tr>
 		<tr>
 			<td>C&amp;I III</td>
-			<td id="CandI III">NO!</td> 
+			<td name="requirement" id="CandI III">NO!</td> 
 		</tr>
 		<tr>
 			<td>DIVERSITY</td>
-			<td id="DIVERSITY">NO!</td> 
+			<td name="requirement" id="DIVERSITY">NO!</td> 
 		</tr>
 	</table>
 		</th>
@@ -259,35 +258,34 @@
 			</tr>
 			<tr>
 				<td>SOC SCI</td>
-				<td id="SOC SCI">NO!</td> 
+				<td name="requirement" id="SOC SCI">NO!</td> 
 			</tr>
 			<tr>
 				<td>ETHICS</td>
-				<td id="ETHICS">NO!</td> 
+				<td name="requirement" id="ETHICS">NO!</td> 
 			</tr>
 			<tr>
 				<td>ELSJ</td>
-				<td id="ELSJ">NO!</td> 
+				<td name="requirement" id="ELSJ">NO!</td> 
 			</tr>
 			<tr>
 				<td>RTC I</td>
-				<td id="RTC I">NO!</td> 
+				<td name="requirement" id="RTC I">NO!</td> 
 			</tr>
 			<tr>
 				<td>RTC II</td>
-				<td id="RTC II">NO!</td> 
+				<td name="requirement" id="RTC II">NO!</td> 
 			</tr>
 			<tr>
 				<td>RTC III</td>
-				<td id="RTC III">NO!</td> 
+				<td name="requirement" id="RTC III">NO!</td> 
 			</tr>
 		</table>
 		</th>
 	</table>
 	<h4>Electives</h4>
-	<table style="width:25%">
-			
-		</table>
+	<table style="width:25%" id="electiveTable">
+	</table>
 		</th>
 	</table>
 		
