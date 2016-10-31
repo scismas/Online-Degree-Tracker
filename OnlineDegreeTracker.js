@@ -23,28 +23,13 @@ var upperDiv = ["COEN 120", "COEN 123", "COEN 127", "COEN 129", "COEN 145", "COE
 
 
 
-function test(){
-  var x = document.getElementById("remove").value;
-  var i = 0;
-  var size = courses.length;
- // alert(x);
- // alert(size);
-/* while(size > 0)
-    if (x === courses[i]) {
-      }
-    i++;
-    }
-  
-}
-*/
-}
-
 function removeThis(){
   var y = document.getElementById("removeMe").value;
   var d = courses.indexOf(y);
   if(courses.indexOf(y) >= 0)
   {
     courses.splice(d,1);
+    populate();
     reset();
     populate();
   }
@@ -73,7 +58,6 @@ function reset(){
   }
   technicalElectives = [];
  
-  alert("reset");
   
 }
 function populate()
@@ -217,6 +201,7 @@ function loadCookieArray()
   if (document.cookie.length > 0)
   {
     courses = JSON.parse(getCookie("cookieCourse"));
+    reset();
     populate();
   }
   return "";
