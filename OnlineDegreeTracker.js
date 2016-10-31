@@ -175,11 +175,9 @@ function fillTable(x){
   
   electives.push(x);
   var table = document.getElementById("electiveTable");
-  for(j = 0; j < electives.length; j++){
   var row = table.insertRow(0);
   var cell1 = row.insertCell(0);
   cell1.innerHTML = x;
-  }
 }
 
 var createCookie = function(name, value, days) {
