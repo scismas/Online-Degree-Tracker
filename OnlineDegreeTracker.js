@@ -60,8 +60,10 @@ function addCourse(){
     x.innerHTML += courses[i] + "<br>";
     generate(courses[i]);
   }
-  createCookie();
+  createCookie("cookieCourse", courses, 365);
 }
+
+
 
 function generate(x){
   
@@ -100,15 +102,19 @@ function generate(x){
 
 var createCookie = function(name, value, days) {
     var expires;
+    var string = JSON.stringify(value);
     if (days) {
         var date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toGMTString();
+        expires = "expires=" + date.toGMTString();
     }
     else {
         expires = "";
     }
-    document.cookie = name + "=" + value + expires + "; path=/";
+    document.cookie = name + "=" + string + ";" + expires + ";path=/";
+
+
+    
 }
 
 function getCookie(c_name) {
@@ -126,6 +132,23 @@ function getCookie(c_name) {
     return "";
 }
 
+function loadCookieArray()
+{
+  if (document.cookie.length > 0)
+  {
+    courses = JSON.parse(getCookie("cookieCourse"));
+    var x = document.getElementById("box");
+    var arrayLength = courses.length;
+    x.innerHTML = "";
+    for (var i = 0; i < arrayLength; i++) 
+    {
+      x.innerHTML += courses[i] + "<br>";
+      generate(courses[i]);
+    }
+  }
+  return "";
+
+}
 
 
 
