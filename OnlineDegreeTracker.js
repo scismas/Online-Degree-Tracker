@@ -41,6 +41,14 @@ var amth108 = ["AMTH 108", "MATH 122"];
 
 
 function removeThis(){
+	var Sanitize2 = document.getElementById("removeMe").value;
+	var re = /^[A-Z]{4}\s{1}[A-Z0-9]+/; 
+	if(re.test(Sanitize2) == 0){
+		alert("Not a Valid Input");
+		document.getElementById("removeMe").innerHTML = "";
+		return;
+	}
+
 	var y = document.getElementById("removeMe").value;
 	var d = courses.indexOf(y);
 	if(courses.indexOf(y) >= 0)
@@ -58,17 +66,13 @@ function removeThis(){
 
 //Would like case insenitive
 function addCourse(){
-	//var y = document.getElementById("input").value;
-	//var re = /^[A-Z]{4}\s{1}[A-Z0-9]+/ ; 
-	//var x = re.match(y);
-	//if (x == 0){
-		
-//	}
-//else {
-//	alert("Not a Valid Input");
-//	document.getElementById("input").innerHTML = "";
-//	return;
-//}
+	var Sanitize1 = document.getElementById("input").value;
+	var re = /^[A-Z]{4}\s{1}[A-Z0-9]+/; 
+	if(re.test(Sanitize1) == 0){
+		alert("Not a Valid Input");
+		document.getElementById("input").innerHTML = "";
+		return;
+	}
 
 
 	// if input == regex string 
@@ -276,5 +280,3 @@ function loadCookieArray()
 	return "";
 
 }
-
-
