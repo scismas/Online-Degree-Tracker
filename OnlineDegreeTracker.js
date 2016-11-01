@@ -106,8 +106,8 @@ function generate(x){
   else if(x == "MATH 13"){document.getElementById("MATH 13").innerHTML = "YES!"; elective = 1;}
   else if(x == "MATH 14"){document.getElementById("MATH 14").innerHTML = "YES!"; elective = 1;}
   else if(x == "MATH 53"){document.getElementById("MATH 53").innerHTML = "YES!"; elective = 1;}
-  else if(x == "MATH 106"){document.getElementById("MATH 106").innerHTML = "YES!"; elective = 1;}//Can be fulfilled with 
-  else if(x == "MATH 108"){document.getElementById("MATH 108").innerHTML = "YES!"; elective = 1;}
+  else if(x == "AMTH 106"){document.getElementById("AMTH 106").innerHTML = "YES!"; elective = 1;}//Can be fulfilled with 
+  else if(x == "AMTH 108"){document.getElementById("AMTH 108").innerHTML = "YES!"; elective = 1;}
   else if(x == "PHYS 31"){document.getElementById("PHYS 31").innerHTML = "YES!"; elective = 1;}
   else if(x == "PHYS 32"){document.getElementById("PHYS 32").innerHTML = "YES!"; elective = 1;}
   else if(x == "PHYS 33"){document.getElementById("PHYS 33").innerHTML = "YES!"; elective = 1;}
