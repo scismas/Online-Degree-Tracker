@@ -44,7 +44,7 @@ function removeThis(){
 	var Sanitize2 = document.getElementById("removeMe").value;
 	var re = /^[A-Z]{4}\s{1}[A-Z0-9]+/; 
 	if(re.test(Sanitize2) == 0){
-		alert("Not a Valid Input");
+		alert("Not a Valid Input. Please follow this format: COEN 10");
 		document.getElementById("removeMe").innerHTML = "";
 		return;
 	}
@@ -69,7 +69,7 @@ function addCourse(){
 	var Sanitize1 = document.getElementById("input").value;
 	var re = /^[A-Z]{4}\s{1}[A-Z0-9]+/; 
 	if(re.test(Sanitize1) == 0){
-		alert("Not a Valid Input");
+		alert("Not a Valid Input. Please follow this format: COEN 10");
 		document.getElementById("input").innerHTML = "";
 		return;
 	}
@@ -129,11 +129,12 @@ function populate()
 		document.getElementById("electiveTable").deleteRow(0);
 	}
 	electives = [];
-	var x = document.getElementById("box");
+	//var x = document.getElementById("box"); <div id="box" style="border:1px solid black;width:150px;height:100px;overflow:auto"> 
+	//</div>
 	var arrayLength = courses.length;
-	x.innerHTML = "";
+	//x.innerHTML = "";
 	for (var i = 0; i < arrayLength; i++) {
-		x.innerHTML += courses[i] + "<br>";
+		//x.innerHTML += courses[i] + "<br>";
 		generate(courses[i]);
 	}
 	createCookie("cookieCourse", courses, 365);
