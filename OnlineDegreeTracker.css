@@ -1,0 +1,23 @@
+
+body {
+    background-color: lightblue;
+}
+h4 {
+    color: Black;
+    text-align: left;
+    font-size: 12px;
+}
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+h5{
+    color: blue;
+    
+}
+
+td{
+    text-align: center;
+    font-size: 10px;
+    
+}
