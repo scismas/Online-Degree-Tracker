@@ -281,3 +281,19 @@ function loadCookieArray()
 	return "";
 
 }
+
+
+function buttonPressAdd(e)
+{
+	if (e.keyCode = 13)
+	{
+		addCourse();
+	}
+}
+function buttonPressRemove(e)
+{
+	if (e.keyCode = 13)
+	{
+		removeThis();
+	}
+}
