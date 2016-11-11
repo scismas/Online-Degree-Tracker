@@ -1,11 +1,12 @@
 
 body {
     background-color: lightblue;
+    
 }
 h4 {
     color: Black;
-    text-align: left;
-    font-size: 12px;
+    text-align: center;
+    font-size: 18px;
 }
 p {
     font-family: verdana;
@@ -13,11 +14,39 @@ p {
 }
 h5{
     color: blue;
-    
+    text-align: center;
 }
 
 td{
     text-align: center;
-    font-size: 10px;
+    font-size: 14px;
+    
+}
+input{
+    align-content: center;
+    text-align: center;
+    align-self: center;
+}
+
+form{
+    text-align: center;
+}
+
+.box {
+    float: left; 
+    width: 200px;
+    height: 100px;
+    margin: auto;
+    
+}
+
+
+table {
+    background-color: white;
+}
+
+.InputForms{
+    background-color: lightblue;
+    
     
 }
