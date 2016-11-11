@@ -13,32 +13,38 @@
 		<title>COEN Planning</title>
 	</head>
 	<body onload="loadCookieArray(); populate()">
-		<h4>Online Degree Tracker</h4>
-		<h5>Designed for SCU COEN majors</h5>
-		
-		<div>
+		<h4>Online Degree Tracker<br>Designed for SCU COEN majors</h4>
+		<div class="box">
+		<div class="InputForms">
 			<h5>Enter Class:</h5>
 			<form>
-				<input id="input" placeholder="&quot;COEN 10&quot;" type=text class=inputText maxlength="10" onkeypress="buttonPressAdd(event)" />
+				<input id="input" placeholder="&quot;COEN 10&quot;" type=text class=inputText maxlength="10" onkeypress="buttonPressAdd(event)"/>
 			 	<input type=button id="inputButton" onclick="addCourse()" value="Add Course" name="button1"/>
 			</form>
 		</div>
-		
-		<div>
+		</div>
+		<div class="box">
+		<div class="InputForms">
 			<h5>Remove Class:</h5>
 			<form>
-				<input id="removeMe" placeholder="&quot;COEN 10&quot;" type=text class=inputText maxlength="10" onkeypress="buttonPressRemove(event)" />
+				<input id="removeMe" placeholder="&quot;COEN 10&quot;" type=text class=inputText maxlength="10" onkeypress="buttonPressRemove(event)"/>
 				<input type=button id="removeButton" onclick="removeThis()" value="Remove Course" name="button2"/>
 			</form>
 		</div>
+		</div>
 			
-		
-
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 
 		<h4>DEGREE PROGRESS</h4>
 		<h4>Major</h4>
+		<div class="box">
+
 	<table>
-	<th>
+	
 		<table style="width:25%">
 			<tr>
 				<th>Requirement</th>
@@ -92,6 +98,15 @@
 				<td>COEN 174</td>
 				<td name="requirement" id="COEN 174">NO!</td> 
 			</tr>
+			
+		</table>
+		</div>
+		<div class="box">
+		<table style="width:25%">
+			<tr>
+				<th>Requirement</th>
+				<th>Fulfilled?</th> 
+			</tr>
 			<tr>
 				<td>COEN 175</td>
 				<td name="requirement" id="COEN 175">NO!</td> 
@@ -99,14 +114,6 @@
 			<tr>
 				<td>COEN 177</td>
 				<td name="requirement" id="COEN 177">NO!</td> 
-			</tr>
-		</table>
-		</th>
-		<th>
-		<table style="width:25%">
-			<tr>
-				<th>Requirement</th>
-				<th>Fulfilled?</th> 
 			</tr>
 			<tr>
 				<td>COEN 179</td>
@@ -123,6 +130,39 @@
 			<tr>
 				<td>COEN 196</td>
 				<td name="requirement" id="COEN 196">NO!</td> 
+			</tr>
+			
+			<tr>
+				<td>ELEN 50</td>
+				<td	name="requirement" id="ELEN 50">NO!</td> 
+			</tr>
+			<tr>
+				<td>ELEN 153</td>
+				<td name="requirement" id="ELEN 153">NO!</td> 
+			</tr>
+			<tr>
+				<td>T.E. I</td>
+				<td name="requirement" id="T.E. I">NO!</td> 
+			</tr>
+			<tr>
+				<td>T.E. II</td>
+				<td name="requirement" id="T.E. II">NO!</td> 
+			</tr>
+			<tr>
+				<td>T.E. III</td>
+				<td name="requirement" id="T.E. III">NO!</td> 
+			</tr>
+			<tr>
+			<td>ENGL 181</td>
+			<td name="requirement" id="ENGL 181">NO!</td> 
+			</tr>
+		</table>
+		</div>
+		<div class="box">
+		<table style="width:25%">
+			<tr>
+				<th>Requirement</th>
+				<th>Fulfilled?</th> 
 			</tr>
 			<tr>
 				<td>MATH 11</td>
@@ -141,8 +181,8 @@
 				<td name="requirement" id="MATH 14">NO!</td> 
 			</tr>
 			<tr>
-				<td>MATH 53</td>
-				<td name="requirement" id="MATH 53">NO!</td> 
+				<td>CHEM 11</td>
+				<td name="requirement" id="CHEM 11">NO!</td> 
 			</tr>
 			<tr>
 				<td>PHYS 31</td>
@@ -157,24 +197,8 @@
 				<td name="requirement" id="PHYS 33">NO!</td> 
 			</tr>
 			<tr>
-				<td>ELEN 50</td>
-				<td	name="requirement" id="ELEN 50">NO!</td> 
-			</tr>
-			<tr>
-				<td>ELEN 153</td>
-				<td name="requirement" id="ELEN 153">NO!</td> 
-			</tr>
-		</table>
-		</th>
-		<th>
-		<table style="width:25%">
-			<tr>
-				<th>Requirement</th>
-				<th>Fulfilled?</th> 
-			</tr>
-			<tr>
-				<td>CHEM 11</td>
-				<td name="requirement" id="CHEM 11">NO!</td> 
+				<td>MATH 53</td>
+				<td name="requirement" id="MATH 53">NO!</td> 
 			</tr>
 			<tr>
 				<td>AMTH 106</td>
@@ -184,24 +208,16 @@
 				<td>AMTH 108</td>
 				<td name="requirement" id="AMTH 108">NO!</td> 
 			</tr>
-			<tr>
-				<td>T.E. I</td>
-				<td name="requirement" id="T.E. I">NO!</td> 
-			</tr>
-			<tr>
-				<td>T.E. II</td>
-				<td name="requirement" id="T.E. II">NO!</td> 
-			</tr>
-			<tr>
-				<td>T.E. III</td>
-				<td name="requirement" id="T.E. III">NO!</td> 
-			</tr>
-			<tr>
-				<td>ENGL 181</td>
-				<td name="requirement" id="ENGL 181">NO!</td> 
-		
+					
 		
 		</table>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 		<br>
 		<br>
 		<br>
@@ -211,24 +227,16 @@
 		<br>
 		<br>
 		
-		</th>
 	</table>
 	<h4>Core Curriculum</h4>
-	<table>
-	<th>
+	
+	<div class="box">
 	<table style="width:25%">
 		<tr>
 			<th>Requirement</th>
 			<th>Fulfilled?</th> 
 		</tr>
-		<tr>
-			<td>CTW I</td>
-			<td name="requirement" id="CTW I">NO!</td> 
-		</tr>
-		<tr>
-			<td>CTW II</td>
-			<td name="requirement" id="CTW II">NO!</td> 
-		</tr>
+		
 		<tr>
 			<td>C&amp;I I</td>
 			<td name="requirement" id="CandI I">NO!</td> 
@@ -246,24 +254,12 @@
 			<td name="requirement" id="DIVERSITY">NO!</td> 
 		</tr>
 	</table>
-		</th>
-		<th>
+		</div>
+		<div class="box">
 		<table style="width:25%">
 			<tr>
 				<th>Requirement</th>
 				<th>Fulfilled?</th> 
-			</tr>
-			<tr>
-				<td>SOC SCI</td>
-				<td name="requirement" id="SOC SCI">NO!</td> 
-			</tr>
-			<tr>
-				<td>ETHICS</td>
-				<td name="requirement" id="ETHICS">NO!</td> 
-			</tr>
-			<tr>
-				<td>ELSJ</td>
-				<td name="requirement" id="ELSJ">NO!</td> 
 			</tr>
 			<tr>
 				<td>RTC I</td>
@@ -277,15 +273,52 @@
 				<td>RTC III</td>
 				<td name="requirement" id="RTC III">NO!</td> 
 			</tr>
+			<tr>
+				<td>ETHICS</td>
+				<td name="requirement" id="ETHICS">NO!</td> 
+			</tr>
+			
 		</table>
-		</th>
-	</table>
+	</div>
+	<div class="box">
+		<table style="width:25%">
+			<tr>
+				<th>Requirement</th>
+				<th>Fulfilled?</th> 
+			</tr>
+			<tr>
+				<td>CTW I</td>
+				<td name="requirement" id="CTW I">NO!</td> 
+			</tr>
+			<tr>
+				<td>CTW II</td>
+				<td name="requirement" id="CTW II">NO!</td> 
+			</tr>
+			<tr>
+				<td>ELSJ</td>
+				<td name="requirement" id="ELSJ">NO!</td> 
+			</tr>
+			<tr>
+				<td>SOC SCI</td>
+				<td name="requirement" id="SOC SCI">NO!</td> 
+			</tr>
+			
+		</table>
+	</div>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	<h4>Electives</h4>
+	
+	<div class="box">
 	<table style="width:25%" id="electiveTable">
 	</table>
 		</th>
 	</table>
-		
+	</div>
 		
 	</body>
 </html>
