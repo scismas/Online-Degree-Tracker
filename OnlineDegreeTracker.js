@@ -285,14 +285,14 @@ function loadCookieArray()
 
 function buttonPressAdd(e)
 {
-	if (e.keyCode = 13)
+	if (e.keyCode == 13)
 	{
 		addCourse();
 	}
 }
 function buttonPressRemove(e)
 {
-	if (e.keyCode = 13)
+	if (e.keyCode == 13)
 	{
 		removeThis();
 	}
