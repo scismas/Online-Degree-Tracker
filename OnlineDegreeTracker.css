@@ -19,7 +19,7 @@ h5{
     text-align: center;
     margin-bottom: 4px;
     margin-top: 4px;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 h2{
@@ -46,8 +46,13 @@ input{
 
 form{
     text-align: center;
+    
 }
 
+.inputButton{
+    font-size: 16px;
+    height: 20px;
+}
 
 .box {
     float: left; 
@@ -101,17 +106,15 @@ table {
     width:100%;
 }
 
+
+.inputText{
+    height: 30px;
+    font-size: 14px;
+}
 .InputForms{
     background-color: lightblue;
 }
 
-#input{
-    height: 20px;
-}
-
-#removeMe{
-    height: 20px;
-}
 
 .electiveTable{
     align-content: right;
