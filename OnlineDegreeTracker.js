@@ -4,6 +4,7 @@ var electives = [];
 
 var doubledip = 0;
 
+
 var CheckSocialScience = 0;
 var CheckEthics = 0;
 var CheckRtc3 = 0;
@@ -15,6 +16,7 @@ var CheckMath53 = 0;
 var CheckAmth108 = 0;
 var CheckChem11 = 0;
 var CheckAmth106 = 0; 
+
 
 
 // double dippers: POLI 2, POLI 3, TESP 45, TESP 159
@@ -40,6 +42,16 @@ var chem11 = ["CHEM 1", "BIOL 18", "CHEM 11", "ENVS 21"];
 var upperDiv = ["COEN 120", "COEN 123", "COEN 127", "COEN 129", "COEN 145", "COEN 148", "COEN 150", "COEN 152", "COEN 160", "COEN 161", "COEN 162", "COEN 163", "COEN 164", "COEN 165", "COEN 166", "COEN 168", "COEN 169", "COEN 172", "COEN 173", "COEN 178", "COEN 180", "ELEN 115", "ELEN 133", "ELEN 134"];
 var math53 = ["MATH 53", "AMTH 118", "MATH 166"];
 var amth108 = ["AMTH 108", "MATH 122"];
+
+function colorFill(){
+	var x = document.getElementsByName("requirement");
+	 var arrayLength = x.length;
+	for(var i = 0; i < arrayLength; i++){
+		x[i].innerHTML ="NO!";
+		x[i].style.backgroundColor = "red";
+	}
+
+}
 
 function removeThis(){
 	var Sanitize2 = document.getElementById("removeMe").value;
@@ -130,7 +142,8 @@ function populate()
 	var t = electives.length;
 	for(var j = 0; j < t; j++)
 	{
-		document.getElementById("electiveTable").deleteRow(0);
+		//document.getElementById("electiveTable").deleteRow(0);
+		document.getElementById("electiveRow").deleteCell(0);
 	}
 	electives = [];
 	//var x = document.getElementById("box"); <div id="box" style="border:1px solid black;width:150px;height:100px;overflow:auto"> 
@@ -146,7 +159,14 @@ function populate()
 
 function generate(x){
 	var elective = 0;
-	var doubledip = 0;
+ 	var one = 0;
+	var two = 0;
+	var three = 0;
+	var four = 0;
+	var five = 0;
+	var six = 0;
+	var seven = 0;
+	
 	if(x == "ENGL 181"){ 
 		document.getElementById("ENGL 181").innerHTML = "YES!"; 
 		document.getElementById("ENGL 181").style.backgroundColor = "rgb(66, 244, 146)";
@@ -312,45 +332,82 @@ function generate(x){
 		document.getElementById("CandI III").style.backgroundColor = "rgb(66, 244, 146)";
 		elective = 1;
 		CheckCi3 = 1; 
-		doubledip = 1;
+		one = 1;
 	}
 	if(diversity.indexOf(x) != -1 && CheckDiversity == 0){
 		document.getElementById("DIVERSITY").innerHTML= x;
 		document.getElementById("DIVERSITY").style.backgroundColor = "rgb(66, 244, 146)"; 
 		elective = 1; 
 		CheckDiversity = 1; 
-		doubledip = 1;}
+		two = 1;
+		}
 	if(elsj.indexOf(x) != -1 && CheckElsj == 0){
 		document.getElementById("ELSJ").innerHTML= x;
 		document.getElementById("ELSJ").style.backgroundColor = "rgb(66, 244, 146)"; 
 		elective = 1; 
 		CheckElsj = 1; 
-		doubledip = 1;}
+		three = 1;
+		}
 	if(rtc2.indexOf(x) != -1 && CheckRtc2 == 0){
 		document.getElementById("RTC II").innerHTML= x; 
 		document.getElementById("RTC II").style.backgroundColor = "rgb(66, 244, 146)";
 		elective = 1; 
 		CheckRtc2 = 1; 
-		doubledip = 1;}
+		four = 1;
+		}
 	if(rtc3.indexOf(x) != -1 && CheckRtc3 == 0){
 		document.getElementById("RTC III").innerHTML= x; 
 		document.getElementById("RTC III").style.backgroundColor = "rgb(66, 244, 146)";
 		elective = 1; 
 		CheckRtc3 = 1; 
-		doubledip = 1;}
+		five = 1;
+		}
 	if(ethics.indexOf(x) != -1 && CheckEthics == 0){
 		document.getElementById("ETHICS").innerHTML= x;
 		document.getElementById("ETHICS").style.backgroundColor = "rgb(66, 244, 146)"; 
 		elective = 1; 
 		CheckEthics = 1; 
-		doubledip = 1;}
+		six = 1;
+		}
 	if(socialScience.indexOf(x) != -1 && CheckSocialScience == 0){
 		document.getElementById("SOC SCI").innerHTML= x; 
 		document.getElementById("SOC SCI").style.backgroundColor = "rgb(66, 244, 146)";
 		elective = 1; 
 		CheckSocialScience = 1; 
-		doubledip = 1;}
+		seven = 1;
+		}
 	
+	if((one + two + three + four + five + six + seven) >= 2)
+		{
+			if(one == 1)
+			{
+				document.getElementById("CandI III").style.backgroundColor = "rgb(0,255,255)";
+			}
+			if(two == 1)
+			{
+				document.getElementById("DIVERSITY").style.backgroundColor = "rgb(0,255,255)";
+			}
+			if(three == 1)
+			{
+				document.getElementById("ELSJ").style.backgroundColor = "rgb(0,255,255)";
+			}
+			if(four == 1)
+			{
+				document.getElementById("RTC II").style.backgroundColor = "rgb(0,255,255)";
+			}
+			if(five == 1)
+			{
+				document.getElementById("RTC III").style.backgroundColor = "rgb(0,255,255)";
+			}
+			if(six == 1)
+			{
+				document.getElementById("ETHICS").style.backgroundColor = "rgb(0,255,255)";
+			}
+			if(seven == 1)
+			{
+				document.getElementById("SOC SCI").style.backgroundColor = "rgb(0,255,255)";
+			}
+		}
 	if(upperDiv.indexOf(x)!= -1){
 		technicalElectives.push(x);
 		var techLength = technicalElectives.length;
@@ -396,9 +453,15 @@ function generate(x){
 function fillTable(x){
 	
 	electives.push(x);
-	var table = document.getElementById("electiveTable");
-	var row = table.insertRow(0);
-	var cell1 = row.insertCell(0);
+	var row = document.getElementById("electiveRow");
+	var cell1 =row.insertCell(0);
+	//var table = document.getElementById("electiveTable");
+	//var row = table.insertRow(0);
+	//var cell1 = row.insertCell(0);
+	//var table = document.getElementById("electiveRow");
+	//var row = table.insertRow(0);
+	//var cell1 = table.insertCell(0);
+	//var cell1 = document.getElementById("electiveRow").insertCell(0);
 	cell1.innerHTML = x;
 	cell1.style.backgroundColor = "rgb(66, 244, 146)";
 }
