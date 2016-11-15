@@ -7,6 +7,8 @@ h4 {
     color: Black;
     text-align: center;
     font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 15px;
 }
 p {
     font-family: verdana;
@@ -15,6 +17,8 @@ p {
 h5{
     color: blue;
     text-align: center;
+    margin-bottom: 4px;
+    margin-top: 4px;
 }
 
 td{
@@ -32,12 +36,37 @@ form{
     text-align: center;
 }
 
+
 .box {
     float: left; 
     width: 200px;
     height: 100px;
     margin: auto;
+    width: 20%;
     
+}
+
+.outerbox
+{
+    width: 100%;
+    margin-left: 24%;
+    margin-right: 50%;
+}
+
+.outerboxbottom
+{
+    width: 100%;
+    margin-left: 24%;
+    margin-right: 40%;
+    height: 40px;
+   
+}
+
+.outerboxtop{
+    width: 100%;
+    margin-left: 30%;
+    margin-right: 50%;
+    align-content: center;
 }
 
 
@@ -47,6 +76,4 @@ table {
 
 .InputForms{
     background-color: lightblue;
-    
-    
 }
