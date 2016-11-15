@@ -19,11 +19,18 @@ h5{
     text-align: center;
     margin-bottom: 4px;
     margin-top: 4px;
+    font-size: 15px;
 }
 
+h2{
+    text-align: center;
+    height: 10px;
+    margin-top: 0px;
+    font-size: 20px;
+}
 td{
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     border-width: 2px;
 }
 th{
@@ -50,6 +57,16 @@ form{
     padding-right: 30px;
     
 }
+.boxFields {
+    float: left; 
+    width: 200px;
+    height: 10px;
+    margin: auto;
+    width: 20%;
+    padding-right: 30px;
+    
+}
+
 
 .outerbox
 {
@@ -61,9 +78,10 @@ form{
 .outerboxbottom
 {
     width: 100%;
-    margin-left: 24%;
+    margin-left: 40%;
     margin-right: 40%;
     height: 40px;
+    
    
 }
 
@@ -72,6 +90,7 @@ form{
     margin-left: 30%;
     margin-right: 50%;
     align-content: center;
+    height: 1px;
 }
 
 
@@ -83,5 +102,17 @@ table {
 
 .InputForms{
     background-color: lightblue;
+}
+
+#input{
+    height: 20px;
+}
+
+#removeMe{
+    height: 20px;
+}
+
+.electiveTable{
+    align-content: right;
 }
 
