@@ -239,7 +239,7 @@ function generate(x){
 		document.getElementById("COEN 12").innerHTML = "YES!";
 		document.getElementById("COEN 12").style.backgroundColor = "rgb(66, 244, 146)"; 
 		elective = 1;}
-	else if(x == "COEN 19"){
+	else if(x == "COEN 19" || x == "MATH 51"){
 		document.getElementById("COEN 19").innerHTML = "YES!";
 		document.getElementById("COEN 19").style.backgroundColor = "rgb(66, 244, 146)"; 
 		elective = 1;}
