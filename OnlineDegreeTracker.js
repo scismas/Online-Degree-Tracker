@@ -117,7 +117,7 @@ function addSpace(x){
 function colorFill(){
 	var x = document.getElementsByName("requirement");
 	var arrayLength = x.length;
-	document.getElementById("Double").style.backgroundColor="rgb(0, 255, 255)";
+	document.getElementById("Double").style.backgroundColor="rgb(41,128,185)";
 	document.getElementById("Incomplete").style.backgroundColor="red";
 	document.getElementById("Satisfied").style.backgroundColor="rgb(66, 244, 146)";
 	for(var i = 0; i < arrayLength; i++){
@@ -459,31 +459,31 @@ function generate(x){
 		{
 			if(one == 1)
 			{
-				document.getElementById("CandI III").style.backgroundColor = "rgb(0,255,255)";
+				document.getElementById("CandI III").style.backgroundColor = "rgb(41,128,185)";
 			}
 			if(two == 1)
 			{
-				document.getElementById("DIVERSITY").style.backgroundColor = "rgb(0,255,255)";
+				document.getElementById("DIVERSITY").style.backgroundColor = "rgb(41,128,185)";
 			}
 			if(three == 1)
 			{
-				document.getElementById("ELSJ").style.backgroundColor = "rgb(0,255,255)";
+				document.getElementById("ELSJ").style.backgroundColor = "rgb(41,128,185)";
 			}
 			if(four == 1)
 			{
-				document.getElementById("RTC II").style.backgroundColor = "rgb(0,255,255)";
+				document.getElementById("RTC II").style.backgroundColor = "rgb(41,128,185)";
 			}
 			if(five == 1)
 			{
-				document.getElementById("RTC III").style.backgroundColor = "rgb(0,255,255)";
+				document.getElementById("RTC III").style.backgroundColor = "rgb(41,128,185)";
 			}
 			if(six == 1)
 			{
-				document.getElementById("ETHICS").style.backgroundColor = "rgb(0,255,255)";
+				document.getElementById("ETHICS").style.backgroundColor = "rgb(41,128,185)";
 			}
 			if(seven == 1)
 			{
-				document.getElementById("SOC SCI").style.backgroundColor = "rgb(0,255,255)";
+				document.getElementById("SOC SCI").style.backgroundColor = "rgb(41,128,185)";
 			}
 		}
 	if(upperDiv.indexOf(x)!= -1){
