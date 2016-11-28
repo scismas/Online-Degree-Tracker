@@ -251,7 +251,7 @@ function generate(x){
 		elective = 1;}
 	else if(x == "ENGR 1"){
 		document.getElementById("ENGR 1").innerHTML = "YES!";
-		document.getElementById("ENGL 1").style.backgroundColor = "rgb(46, 204, 113)"; 
+		document.getElementById("ENGR 1").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1;}
 	else if(x == "COEN 10"){ 
 		document.getElementById("COEN 10").innerHTML = "YES!";
