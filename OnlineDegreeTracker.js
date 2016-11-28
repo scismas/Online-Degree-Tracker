@@ -74,7 +74,7 @@ function clearCourses(){
 		var arrayLength = x.length;
 		for(var i = 0; i < arrayLength; i++){
 			x[i].innerHTML ="NO!";
-			x[i].style.backgroundColor = "red";
+			x[i].style.backgroundColor = "rgb(242, 38, 19)";
 		}
 		var t = electives.length;
 		for(var j = 0; j < t; j++)
@@ -117,12 +117,12 @@ function addSpace(x){
 function colorFill(){
 	var x = document.getElementsByName("requirement");
 	var arrayLength = x.length;
-	document.getElementById("Double").style.backgroundColor="rgb(41,128,185)";
-	document.getElementById("Incomplete").style.backgroundColor="red";
-	document.getElementById("Satisfied").style.backgroundColor="rgb(66, 244, 146)";
+	document.getElementById("Double").style.backgroundColor="rgb(82, 179, 217)";
+	document.getElementById("Incomplete").style.backgroundColor="rgb(242, 38, 19)";
+	document.getElementById("Satisfied").style.backgroundColor="rgb(46, 204, 113)";
 	for(var i = 0; i < arrayLength; i++){
 		x[i].innerHTML ="NO!";
-		x[i].style.backgroundColor = "red";
+		x[i].style.backgroundColor = "rgb(242, 38, 19)";
 	}
 
 }
@@ -196,7 +196,7 @@ function reset(){
 	 var arrayLength = x.length;
 	for(var i = 0; i < arrayLength; i++){
 		x[i].innerHTML ="NO!";
-		x[i].style.backgroundColor = "red";
+		x[i].style.backgroundColor = "rgb(242, 38, 19)";
 	}
 	technicalElectives = [];
  
@@ -247,159 +247,159 @@ function generate(x){
 	
 	if(x == "ENGL 181"){ 
 		document.getElementById("ENGL 181").innerHTML = "YES!"; 
-		document.getElementById("ENGL 181").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("ENGL 181").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(x == "ENGR 1"){
 		document.getElementById("ENGR 1").innerHTML = "YES!";
-		document.getElementById("ENGL 1").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("ENGL 1").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1;}
 	else if(x == "COEN 10"){ 
 		document.getElementById("COEN 10").innerHTML = "YES!";
-		document.getElementById("COEN 10").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("COEN 10").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1;}
 	else if(x == "COEN 11"){ 
 		document.getElementById("COEN 11").innerHTML = "YES!";
-		document.getElementById("COEN 11").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("COEN 11").style.backgroundColor = "rgb(46, 204, 113)";
 	 	elective = 1;}
 	else if(x == "COEN 12"){ 
 		document.getElementById("COEN 12").innerHTML = "YES!";
-		document.getElementById("COEN 12").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("COEN 12").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1;}
 	else if(x == "COEN 19" || x == "MATH 51"){
 		document.getElementById("COEN 19").innerHTML = "YES!";
-		document.getElementById("COEN 19").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("COEN 19").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1;}
 	else if(x == "COEN 20"){
 		document.getElementById("COEN 20").innerHTML = "YES!";
-		document.getElementById("COEN 20").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("COEN 20").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1;}
 	else if(x == "COEN 21"){
 		document.getElementById("COEN 21").innerHTML = "YES!";
-		document.getElementById("COEN 21").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("COEN 21").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1;}
 	else if(x == "COEN 70"){
 		document.getElementById("COEN 70").innerHTML = "YES!";
-		document.getElementById("COEN 70").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("COEN 70").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1;}
 	else if(x == "COEN 122"){
 		document.getElementById("COEN 122").innerHTML = "YES!"; 
-		document.getElementById("COEN 122").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("COEN 122").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(x == "COEN 146"){
 		document.getElementById("COEN 146").innerHTML = "YES!"; 
-		document.getElementById("COEN 146").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("COEN 146").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(x == "COEN 171"){
 		document.getElementById("COEN 171").innerHTML = "YES!";
-		document.getElementById("COEN 171").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("COEN 171").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1;}
 	else if(x == "COEN 174"){
 		document.getElementById("COEN 174").innerHTML = "YES!";
-		document.getElementById("COEN 174").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("COEN 174").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1;}
 	else if(x == "COEN 175"){
 		document.getElementById("COEN 175").innerHTML = "YES!";
-		document.getElementById("COEN 175").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("COEN 175").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1;}
 	else if(x == "COEN 177"){
 		document.getElementById("COEN 177").innerHTML = "YES!";
-		document.getElementById("COEN 177").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("COEN 177").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1;}
 	else if(x == "COEN 179"){
 		document.getElementById("COEN 179").innerHTML = "YES!";
-		document.getElementById("COEN 179").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("COEN 179").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(x == "COEN 194"){
 		document.getElementById("COEN 194").innerHTML = "YES!"; 
-		document.getElementById("COEN 194").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("COEN 194").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(x == "COEN 195"){
 		document.getElementById("COEN 195").innerHTML = "YES!"; 
-		document.getElementById("COEN 195").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("COEN 195").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(x == "COEN 196"){
 		document.getElementById("COEN 196").innerHTML = "YES!"; 
-		document.getElementById("COEN 196").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("COEN 196").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(x == "MATH 11"){
 		document.getElementById("MATH 11").innerHTML = "YES!"; 
-		document.getElementById("MATH 11").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("MATH 11").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(x == "MATH 12"){
 		document.getElementById("MATH 12").innerHTML = "YES!"; 
-		document.getElementById("MATH 12").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("MATH 12").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(x == "MATH 13"){
 		document.getElementById("MATH 13").innerHTML = "YES!";
-		document.getElementById("MATH 13").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("MATH 13").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1;}
 	else if(x == "MATH 14"){
 		document.getElementById("MATH 14").innerHTML = "YES!";
-		document.getElementById("MATH 14").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("MATH 14").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	
 	//Can be fulfilled with 
 	
 	else if(x == "PHYS 31"){
 		document.getElementById("PHYS 31").innerHTML = "YES!";
-		document.getElementById("PHYS 31").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("PHYS 31").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1;}
 	else if(x == "PHYS 32"){
 		document.getElementById("PHYS 32").innerHTML = "YES!"; 
-		document.getElementById("PHYS 32").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("PHYS 32").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(x == "PHYS 33"){
 		document.getElementById("PHYS 33").innerHTML = "YES!"; 
-		document.getElementById("PHYS 33").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("PHYS 33").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(x == "ELEN 50"){
 		document.getElementById("ELEN 50").innerHTML = "YES!"; 
-		document.getElementById("ELEN 50").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("ELEN 50").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(x == "ELEN 153"){
 		document.getElementById("ELEN 153").innerHTML = "YES!"; 
-		document.getElementById("ELEN 153").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("ELEN 153").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	
 	else if(math53.indexOf(x) != -1 && CheckMath53 == 0){
 		document.getElementById("MATH 53").innerHTML = x;
-		document.getElementById("MATH 53").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("MATH 53").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1; 
 		CheckMath53 = 1;}
 	else if(amth108.indexOf(x) != -1 && CheckAmth108 == 0){
 		document.getElementById("AMTH 108").innerHTML = x; 
-		document.getElementById("AMTH 108").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("AMTH 108").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1; 
 		CheckAmth108 = 1;}
 	
 	else if(rtc1.indexOf(x) != -1){
 		document.getElementById("RTC I").innerHTML= x; 
-		document.getElementById("RTC I").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("RTC I").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(chem11.indexOf(x) != -1 && CheckChem11 == 0){
 		document.getElementById("CHEM 11").innerHTML= x;
-		document.getElementById("CHEM 11").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("CHEM 11").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1; 
 		CheckChem11 = 1;}
 	else if(ctw1.indexOf(x) != -1){
 		document.getElementById("CTW I").innerHTML= x; 
-		document.getElementById("CTW I").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("CTW I").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(ctw2.indexOf(x) != -1){
 		document.getElementById("CTW II").innerHTML= x; 
-		document.getElementById("CTW II").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("CTW II").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(CI1.indexOf(x) != -1){
 		document.getElementById("CandI I").innerHTML= x; 
-		document.getElementById("CandI I").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("CandI I").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(CI2.indexOf(x) != -1){
 		document.getElementById("CandI II").innerHTML= x; 
-		document.getElementById("CandI II").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("CandI II").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
 	else if(amth106.indexOf(x) != -1 && CheckAmth106 == 0){
 		document.getElementById("AMTH 106").innerHTML = x; 
-		document.getElementById("AMTH 106").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("AMTH 106").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1; 
 		CheckAmth106 = 1;}
 	
@@ -407,49 +407,49 @@ function generate(x){
 	
 	if(CI3.indexOf(x) != -1 && CheckCi3 == 0){
 		document.getElementById("CandI III").innerHTML= x;
-		document.getElementById("CandI III").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("CandI III").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;
 		CheckCi3 = 1; 
 		one = 1;
 	}
 	if(diversity.indexOf(x) != -1 && CheckDiversity == 0){
 		document.getElementById("DIVERSITY").innerHTML= x;
-		document.getElementById("DIVERSITY").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("DIVERSITY").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1; 
 		CheckDiversity = 1; 
 		two = 1;
 		}
 	if(elsj.indexOf(x) != -1 && CheckElsj == 0){
 		document.getElementById("ELSJ").innerHTML= x;
-		document.getElementById("ELSJ").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("ELSJ").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1; 
 		CheckElsj = 1; 
 		three = 1;
 		}
 	if(rtc2.indexOf(x) != -1 && CheckRtc2 == 0){
 		document.getElementById("RTC II").innerHTML= x; 
-		document.getElementById("RTC II").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("RTC II").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1; 
 		CheckRtc2 = 1; 
 		four = 1;
 		}
 	if(rtc3.indexOf(x) != -1 && CheckRtc3 == 0){
 		document.getElementById("RTC III").innerHTML= x; 
-		document.getElementById("RTC III").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("RTC III").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1; 
 		CheckRtc3 = 1; 
 		five = 1;
 		}
 	if(ethics.indexOf(x) != -1 && CheckEthics == 0){
 		document.getElementById("ETHICS").innerHTML= x;
-		document.getElementById("ETHICS").style.backgroundColor = "rgb(66, 244, 146)"; 
+		document.getElementById("ETHICS").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1; 
 		CheckEthics = 1; 
 		six = 1;
 		}
 	if(socialScience.indexOf(x) != -1 && CheckSocialScience == 0){
 		document.getElementById("SOC SCI").innerHTML= x; 
-		document.getElementById("SOC SCI").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("SOC SCI").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1; 
 		CheckSocialScience = 1; 
 		seven = 1;
@@ -459,31 +459,31 @@ function generate(x){
 		{
 			if(one == 1)
 			{
-				document.getElementById("CandI III").style.backgroundColor = "rgb(41,128,185)";
+				document.getElementById("CandI III").style.backgroundColor = "rgb(82, 179, 217)";
 			}
 			if(two == 1)
 			{
-				document.getElementById("DIVERSITY").style.backgroundColor = "rgb(41,128,185)";
+				document.getElementById("DIVERSITY").style.backgroundColor = "rgb(82, 179, 217)";
 			}
 			if(three == 1)
 			{
-				document.getElementById("ELSJ").style.backgroundColor = "rgb(41,128,185)";
+				document.getElementById("ELSJ").style.backgroundColor = "rgb(82, 179, 217)";
 			}
 			if(four == 1)
 			{
-				document.getElementById("RTC II").style.backgroundColor = "rgb(41,128,185)";
+				document.getElementById("RTC II").style.backgroundColor = "rgb(82, 179, 217)";
 			}
 			if(five == 1)
 			{
-				document.getElementById("RTC III").style.backgroundColor = "rgb(41,128,185)";
+				document.getElementById("RTC III").style.backgroundColor = "rgb(82, 179, 217)";
 			}
 			if(six == 1)
 			{
-				document.getElementById("ETHICS").style.backgroundColor = "rgb(41,128,185)";
+				document.getElementById("ETHICS").style.backgroundColor = "rgb(82, 179, 217)";
 			}
 			if(seven == 1)
 			{
-				document.getElementById("SOC SCI").style.backgroundColor = "rgb(41,128,185)";
+				document.getElementById("SOC SCI").style.backgroundColor = "rgb(82, 179, 217)";
 			}
 		}
 	if(upperDiv.indexOf(x)!= -1){
@@ -492,32 +492,32 @@ function generate(x){
 		elective = 1;
 		if (techLength == 1){
 			document.getElementById("T.E. I").innerHTML= technicalElectives[0];
-			document.getElementById("T.E. I").style.backgroundColor = "rgb(66, 244, 146)";
+			document.getElementById("T.E. I").style.backgroundColor = "rgb(46, 204, 113)";
 			
 		}
 		else if (techLength == 2){
 			document.getElementById("T.E. I").innerHTML= technicalElectives[0];
-			document.getElementById("T.E. I").style.backgroundColor = "rgb(66, 244, 146)";
+			document.getElementById("T.E. I").style.backgroundColor = "rgb(46, 204, 113)";
 			document.getElementById("T.E. II").innerHTML= technicalElectives[1];
-			document.getElementById("T.E. II").style.backgroundColor = "rgb(66, 244, 146)";
+			document.getElementById("T.E. II").style.backgroundColor = "rgb(46, 204, 113)";
 			
 		}
 		else if (techLength == 3){
 			document.getElementById("T.E. I").innerHTML= technicalElectives[0];
-			document.getElementById("T.E. I").style.backgroundColor = "rgb(66, 244, 146)";
+			document.getElementById("T.E. I").style.backgroundColor = "rgb(46, 204, 113)";
 			document.getElementById("T.E. II").innerHTML= technicalElectives[1];
-			document.getElementById("T.E. II").style.backgroundColor = "rgb(66, 244, 146)";
+			document.getElementById("T.E. II").style.backgroundColor = "rgb(46, 204, 113)";
 			document.getElementById("T.E. III").innerHTML= technicalElectives[2];
-			document.getElementById("T.E. III").style.backgroundColor = "rgb(66, 244, 146)";
+			document.getElementById("T.E. III").style.backgroundColor = "rgb(46, 204, 113)";
 			
 		}
 		else {
 			document.getElementById("T.E. I").innerHTML= technicalElectives[0];
-			document.getElementById("T.E. I").style.backgroundColor = "rgb(66, 244, 146)";
+			document.getElementById("T.E. I").style.backgroundColor = "rgb(46, 204, 113)";
 			document.getElementById("T.E. II").innerHTML= technicalElectives[1];
-			document.getElementById("T.E. II").style.backgroundColor = "rgb(66, 244, 146)";
+			document.getElementById("T.E. II").style.backgroundColor = "rgb(46, 204, 113)";
 			document.getElementById("T.E. III").innerHTML= technicalElectives[2];
-			document.getElementById("T.E. III").style.backgroundColor = "rgb(66, 244, 146)";
+			document.getElementById("T.E. III").style.backgroundColor = "rgb(46, 204, 113)";
 			elective = 0;
 
 		}
@@ -541,7 +541,7 @@ function fillTable(x){
 	//var cell1 = table.insertCell(0);
 	//var cell1 = document.getElementById("electiveRow").insertCell(0);
 	cell1.innerHTML = x;
-	cell1.style.backgroundColor = "rgb(66, 244, 146)";
+	cell1.style.backgroundColor = "rgb(46, 204, 113)";
 }
 
 var createCookie = function(name, value, days) {
