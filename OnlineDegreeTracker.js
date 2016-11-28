@@ -10,13 +10,15 @@
 /	DIRECTIONS TO 
 /
 */
+
+//These arrays hold the class list and the list of technical and nontechnical electives
 var courses = [];
 var technicalElectives = [];
 var electives = [];
 
 var doubledip = 0;
 
-
+//These variables check for cores and classes that are able to be filled by multiple classes
 var CheckSocialScience = 0;
 var CheckEthics = 0;
 var CheckRtc3 = 0;
@@ -34,6 +36,8 @@ var CheckAmth106 = 0;
 // double dippers: POLI 2, POLI 3, TESP 45, TESP 159, ANTH 3, COMM 107A, LBST 106, ETHN 160, ETHN 161, PHIL 5A
 //		   PHIL 70, POLI 134, POLI 140, POLI 145, PSYC 114EL, RSOC 99, SCTR 128, TESP 43, TESP 46, TESP 64
 //		   TESP 65, TESP 133, TESP 157, TESP 183
+
+//The various arrays of all classes in the course catalog
 var CI1 = ["ANTH 11A", "ARTH 11A", "ARTH 11H", "CLAS 11A", "ENGL 11A", "ENVS 11A", "HIST 11A", "HIST 11H", "ITAL 11A", "MUSC 11A", "PHIL 11A", "SOCI 11A", "THTR 11A", "WGST 11A"];
 var CI2 = ["ANTH 12A", "ARTH 12A","CLAS 12A","ENGL 12A","ENVS 12A","HIST 12A","HIST 12H","ITAL 12A","MUSC 12A","PHIL 12A","SOCI 12A","THTR 12A","WGST 12A"];
 var CI3 = ["TESP 133", "POLI 3", "ANTH 50", "ANTH 152", "ARTH 27", "ARTH 160", "ECON 134", "ENGL 153", "ENGL 156", "FREN 114", "HIST 92", "HIST 116S", "HIST 137", "HIST 142", "HIST 147B", "HIST 150", "MGMT 80", "MUSC 130", "POLI 2", "POLI 50", "POLI 137", "RSOC 136", "SPAN 112", "WGST 104", "WGST 122", "WGST 124", "WGST 126", "ANTH 156", "ANTH 159", "ANTH 172", "ANTH 181", "ANTH 184", "ANTH 185", "ANTH 186", "ANTH 187", "ANTH 188", "ARAB 137", "ARTH 24", "ARTH 25", "ARTH 26", "ARTH 152", "ARTH 161", "ARTH 162", "ARTH 163", "ARTH 164", "ARTH 170", "CLAS 60", "COMM 105A", "COMM 183A", "COMM 184A", "COMM 187A", "COMM 188A", "COMM 189A", "DANC 68", "ENGR 177", "ENGL 56", "ENGL 66", "ENGL 31A", "ENGL 120", "ENGL 157", "FREN 111", "FREN 112", "FREN 113", "FREN 174", "HIST 64", "HIST 91", "HIST 95", "HIST 102S", "HIST 104", "HIST 107", "HIST 112", "HIST 122", "HIST 136", "HIST 140S", "HIST 141", "HIST 143S", "HIST 144S", "HIST 145", "HIST 146A", "HIST 146B", "HIST 147A", "HIST 151", "HIST 152", "HIST 154B", "HIST 157", "HIST 161", "HIST 162", "HIST 163", "HIST 164S", "HIST 166", "MUSC 136", "POLI 126", "POLI 136", "POLI 140", "POLI 145", "POLI 148", "SOCI 134", "SOCI 135", "SOCI 138", "SPAN 137", "SPAN 147", "SPAN 149", "WGST 120", "WGST 123", "WGST 125", "WGST 128", "WGST 172", "WGST 175"];
@@ -55,7 +59,14 @@ var upperDiv = ["COEN 120", "COEN 123", "COEN 127", "COEN 129", "COEN 145", "COE
 var math53 = ["MATH 53", "AMTH 118", "MATH 166"];
 var amth108 = ["AMTH 108", "MATH 122"];
 
+/*
+/ This function resets the variables and arrays associated with the student's class list
+/ It also marks the requirements as incomplete
+/
+*/
 function clearCourses(){
+		
+		//Resets the classes that can be fulfilled by multiple classes
 		CheckSocialScience = 0;
 		CheckEthics = 0;
 		CheckRtc2 = 0;
@@ -69,31 +80,42 @@ function clearCourses(){
 		CheckChem11 = 0;
 		doubledip=0;
 		
-		
+		//Sets the indicator box to a incomplete
 		var x = document.getElementsByName("requirement");
 		var arrayLength = x.length;
 		for(var i = 0; i < arrayLength; i++){
 			x[i].innerHTML ="NO!";
 			x[i].style.backgroundColor = "rgb(242, 38, 19)";
 		}
+	
+		//Deletes the electives table
 		var t = electives.length;
 		for(var j = 0; j < t; j++)
 		{
 			//document.getElementById("electiveTable").deleteRow(0);
 			document.getElementById("electiveRow").deleteCell(0);
 		}
+	
+		//Resets the course arrays
 		electives = [];
 		technicalElectives = [];
 		courses = [];
+	
+		//Populates the course with the new lists
 		populate();
 		
 		
 }
-
+/*
+/ This function adds a space between the course and course number if the user did not include one
+*/
 function addSpace(x){
+	
+	//Records the length of the string
 	var stringLength = x.length;
 	var copy = [];
 	
+	//These cases do not need an added space
 	if (stringLength <= 4){
 		return x;
 	}
@@ -101,6 +123,7 @@ function addSpace(x){
 		return x;
 	}
 	
+	//Adds a space to the user input
 	else{
 		for(var i = 0; i < stringLength; i++)
 			{
@@ -126,6 +149,7 @@ function colorFill(){
 	}
 
 }
+
 
 function removeThis(){
 	var spaced = addSpace(document.getElementById("removeMe").value);
