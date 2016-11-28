@@ -546,7 +546,11 @@ function fillTable(x){
 
 var createCookie = function(name, value, days) {
 		var expires;
+		
+		//Creates a JSON string based on the array entered
 		var string = JSON.stringify(value);
+		
+		//Sets the expiration date. A year in this case
 		if (days) {
 				var date = new Date();
 				date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -555,31 +559,47 @@ var createCookie = function(name, value, days) {
 		else {
 				expires = "";
 		}
+		
+		//Formats the cookie
 		document.cookie = name + "=" + string + ";" + expires + ";path=/";
 
 
 		
 }
 
-function getCookie(c_name) {
-		if (document.cookie.length > 0) {
-				c_start = document.cookie.indexOf(c_name + "=");
-				if (c_start != -1) {
-						c_start = c_start + c_name.length + 1;
-						c_end = document.cookie.indexOf(";", c_start);
-						if (c_end == -1) {
-								c_end = document.cookie.length;
-						}
-						return unescape(document.cookie.substring(c_start, c_end));
+function getCookie(name) 
+{
+		//Checks if cookie exists
+		if (document.cookie.length > 0) 
+		{
+			//Finds the start of the cookie	
+			start = document.cookie.indexOf(name + "=");
+			
+			//If no error in start of cookie
+			if (start != -1) 
+			{	//Skip the name section
+				start = start + name.length + 1;
+				
+				//Limits to the "string" part of cookie
+				end = document.cookie.indexOf(";", start);
+				if (end == -1) 
+				{
+					end = document.cookie.length;
 				}
+				
+				//Returns the string
+				return unescape(document.cookie.substring(start, end));
+			}
 		}
 		return "";
 }
 
 function loadCookieArray()
 {
+	//If there is a cookie
 	if (document.cookie.length > 0)
 	{
+		//Parses the cookie into the course list, resets the page, and repopulate the classes
 		courses = JSON.parse(getCookie("cookieCourse"));
 		reset();
 		populate();
@@ -588,6 +608,8 @@ function loadCookieArray()
 
 }
 
+
+//Detects the enter key
 function buttonPressAdd(e)
 {
 	if (e.keyCode == 13)
