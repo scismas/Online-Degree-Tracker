@@ -90,6 +90,30 @@ function clearCourses(){
 		
 }
 
+function addSpace(x){
+	var stringLength = x.length;
+	var copy = [];
+	
+	if (stringLength <= 4){
+		return x;
+	}
+	else if (x.charAt(4) == ' '){
+		return x;
+	}
+	
+	else{
+		for(var i = 0; i < stringLength; i++)
+			{
+				if (i == 4){
+					copy += ' ';
+				}
+				copy += x.charAt(i);
+			}
+		return copy;
+	}
+}
+
+
 function colorFill(){
 	var x = document.getElementsByName("requirement");
 	var arrayLength = x.length;
@@ -104,7 +128,8 @@ function colorFill(){
 }
 
 function removeThis(){
-	var Sanitize2 = document.getElementById("removeMe").value;
+	var spaced = addSpace(document.getElementById("removeMe").value);
+	var Sanitize2 = spaced;
 	var upperCase = Sanitize2.toUpperCase();
 	var re = /^[A-Z]{4}\s{1}[A-Z0-9]+/; 
 	if(re.test(upperCase) == 0){
@@ -130,7 +155,8 @@ function removeThis(){
 
 //Would like case insenitive
 function addCourse(){
-	var Sanitize1 = document.getElementById("input").value;
+	var spaced = addSpace(document.getElementById("input").value);
+	var Sanitize1 = spaced;
 	var upperCase = Sanitize1.toUpperCase();
 	var re = /^[A-Z]{4}\s{1}[A-Z0-9]+/; 
 	if(re.test(upperCase) == 0){
