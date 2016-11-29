@@ -7,7 +7,7 @@
 /		In addition, this file contains lists of classes which satisfy specific SCU requirements that are stored in arrays.
 /		The file also includes the functions to help us with cookies.
 /
-/	DIRECTIONS TO 
+/	
 /
 */
 
@@ -46,9 +46,7 @@ var coen = ["COEN 10", "COEN 11", "COEN 12", "COEN 19", "COEN 20", "COEN 21", "C
 var ctw1 = ["ENGL 1A", "ENGL 1H"]; 
 var ctw2 = ["ENGL 2A", "ENGL 2H", "PHIL 2A", "WGST 2A"]; 
 var diversity = ["TESP 64", "ANTH 157", "ARTH 143", "ARTH 185", "COMM 107A", "ENGL 38", "ENGL 67", "ENGL 125H", "ETHN 5", "ETHN 30", "ETHN 40", "ETHN 132", "ETHN 144", "ETHN 153", "ETHN 157", "ETHN 165", "ETHN 178", "HIST 178", "LBST 106", "MUSC 132", "POLI 153", "POLI 154", "PSYC 182", "SOCI 33", "SOCI 153", "WGST 34", "WGST 50", "WGST 115", "WGST 155", "WGST 156", "WGST 163", "ANTH 146", "ANTH 148", "ANTH 149", "ANTH 170", "ARTH 140", "ARTH 146", "COMM 121A", "COMM 164A", "COMM 168A", "DANC 62", "DANC 162", "DANC 66", "DANC 166", "ECON 166", "ENGL 31G", "ENGL 35", "ENGL 35G", "ENGL 36", "ENGL 39", "ENGL 68", "ENGL 69", "ENGL 79G", "ENGL 122", "ENGL 122AW", "ENGL 125", "ENGL 129", "ENGL 132G", "ENGL 135", "ENGL 136", "ENGL 138", "ENGL 152", "ETHN 10", "ETHN 20", "ETHN 35", "ETHN 36", "ETHN 41", "ETHN 50", "ETHN 51", "ETHN 65", "ETHN 70", "ETHN 95", "ETHN 96", "ETHN 120", "ETHN 123", "ETHN 125", "ETHN 130", "ETHN 134", "ETHN 135", "ETHN 139", "ETHN 141", "ETHN 142", "ETHN 145", "ETHN 149", "ETHN 152", "ETHN 154", "ETHN 155", "ETHN 156", "ETHN 160", "ETHN 161", "ETHN 162", "ETHN 163", "HIST 84", "HIST 153", "HIST 156A", "HIST 156B", "HIST 158", "HIST 172", "HIST 174", "HIST 177", "HIST 180", "HIST 181", "HIST 182", "HIST 183", "HIST 185", "HIST 187", "HIST 188S", "ITAL 185", "LEAD 10", "MUSC 20", "MUSC 134", "MUSC 196", "PHIL 70", "PHIL 156", "POLI 134", "POLI 171", "POLI 195DW", "PSYC 156", "PSYC 189", "PSYC 196", "SOCI 150", "SOCI 162", "SOCI 175", "SOCI 180", "SPAN 176", "THTR 65", "THTR 151", "THTR 161", "TESP 65", "WGST 14", "WGST 15", "WGST 51", "WGST 56", "WGST 57", "WGST 101", "WGST 110", "WGST 111", "WGST 112", "WGST 113", "WGST 114", "WGST 116", "WGST 117", "WGST 118", "WGST 134", "WGST 134AW", "WGST 136", "WGST 138", "WGST 144", "WGST 164", "WGST 173", "WGST 174", "WGST 180", "WGST 188"];
-var elen = ["ELEN 50", "ELEN 153"];
 var elsj = ["TESP 133", "TESP 45", "POLI 3", "ANTH 3", "BIOL 188", "BUSN 151B", "BUSN 195EL", "COMM 107A", "COMM 141B", "ELSJ 22", "ELSJ 23", "ELSJ 135", "ENGR 111", "ENVS 131", "LBST 106", "MGMT 8", "PSYC 115EL", "PSYC 185EL", "SCTR 128", "SOCI 30", "SPAN 21EL", "TESP 46", "BUSN 188", "BUSN 189", "COMM 40EL", "DANC 59", "DANC 159", "DANC 69", "DANC 169", "DANC 189", "ENGL 106EL", "ENGL 111", "ENGL 145EL", "ENGL 150EL", "ENGL 176", "ENVS 155", "ETHN 60", "ETHN 160", "ETHN 161", "ELSJ 30", "ELSJ 50", "ELSJ 111", "ELSJ 197", "ELSJ 198", "ELSJ 199", "INTL 139", "INTL 139BF", "LEAD 10", "LEAD 17", "PHIL 5A", "PHIL 70", "POLI 158", "POLI 198EL", "PSYC 113EL", "PSYC 114EL", "PSYC 117EL", "PSYC 190EL", "PSYC 196", "PHSC 31", "PHSC 131", "PHSC 170", "RSOC 99", "RSOC 135", "SOCI 148", "SOCI 165", "SPAN 22EL", "SPAN 23EL", "ARTS 151", "TESP 43", "TESP 129", "TESP 157", "TESP 158", "TESP 183"];
-var engr = ["ENGR 1"];
 var ethics = ["TESP 159", "ENGR 19", "MGMT 6", "PHIL 5", "PHIL 6", "PHIL 7B", "PHIL 9", "PHIL 10", "WGST 189", "CLAS 149", "PHIL 2", "PHIL 3A", "PHIL 4A", "PHIL 4B", "PHIL 5A", "PHIL 7", "PHIL 8", "PHIL 111", "PHIL 113", "PHIL 115", "PHIL 116", "PHIL 121", "PHIL 122A", "PHIL 122B", "PHIL 123", "PSYC 114EL", "PHSC 7", "WGST 58", "WGST 184"];
 var rtc1 = ["RSOC 9", "RSOC 10", "RSOC 10H", "RSOC 12", "SCTR 15", "SCTR 19", "TESP 2", "TESP 4", "RSOC 7", "RSOC 19", "SCTR 11"];
 var rtc2 = ["TESP 64", "TESP 45", "TESP 43", "CLAS 63", "COMM 175A", "RSOC 27", "RSOC 51", "RSOC 91", "SCTR 33", "SCTR 39", "TESP 46", "TESP 50", "TESP 60", "WGST 47", "ANTH 150", "ARAB 171", "CLAS 12A", "CLAS 65", "CLAS 67", "CLAS 68", "CLAS 69", "COMM 179A", "ENGL 161", "ENGL 162", "ENGR 143", "ENVS 84", "HIST 16", "HIST 17", "HIST 103", "HIST 117", "HIST 120", "HIST 126", "HIST 129", "HIST 152", "MUSC 189", "PHIL 60", "POLI 139", "PSYC 193", "RSOC 33", "RSOC 38", "RSOC 46", "RSOC 54", "RSOC 64", "RSOC 67", "RSOC 81", "RSOC 85", "RSOC 86", "RSOC 87", "RSOC 88", "RSOC 90", "RSOC 96", "RSOC 99", "SCTR 26", "SCTR 27", "SCTR 28", "SCTR 30", "SCTR 35", "SCTR 45", "SCTR 48", "SCTR 58", "SCTR 65", "TESP 41", "TESP 65", "TESP 71", "TESP 72", "TESP 77", "TESP 79", "TESP 82", "TESP 86", "TESP 88", "WGST 46", "WGST 48"];
@@ -137,8 +135,9 @@ function addSpace(x){
 		return copy;
 	}
 }
-
-
+/*
+/ This function is called when the page is loaded and it fills in the table cells with their needed background colors
+*/
 function colorFill(){
 	var x = document.getElementsByName("requirement");
 	var arrayLength = x.length;
@@ -151,8 +150,6 @@ function colorFill(){
 	}
 
 }
-
-
 function removeThis(){
 	var spaced = addSpace(document.getElementById("removeMe").value);
 	var Sanitize2 = spaced;
@@ -620,13 +617,6 @@ function fillTable(x){
 	electives.push(x);
 	var row = document.getElementById("electiveRow");
 	var cell1 =row.insertCell(0);
-	//var table = document.getElementById("electiveTable");
-	//var row = table.insertRow(0);
-	//var cell1 = row.insertCell(0);
-	//var table = document.getElementById("electiveRow");
-	//var row = table.insertRow(0);
-	//var cell1 = table.insertCell(0);
-	//var cell1 = document.getElementById("electiveRow").insertCell(0);
 	cell1.innerHTML = x;
 	cell1.style.backgroundColor = "rgb(46, 204, 113)";
 }
@@ -653,7 +643,6 @@ var createCookie = function(name, value, days) {
 
 		
 }
-
 function getCookie(name) 
 {
 		//Checks if cookie exists
@@ -694,7 +683,6 @@ function loadCookieArray()
 	return "";
 
 }
-
 
 //Detects the enter key
 function buttonPressAdd(e)
