@@ -345,7 +345,7 @@ function handleSpecialCases(){
 
 
 /* 
-/ generate() compares it's input with the list of requirements
+/ generate() compares its input with the list of requirements
 / If the input matches the requirement, it will light up in its corresponding way
 */
 function generate(x){
