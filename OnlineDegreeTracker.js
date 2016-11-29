@@ -12,7 +12,7 @@
 /		If you wish add another core requirement this can easily be done by adding the corresponding course catalog number (Example "COEN 10",)
 /		into the respected requirement array.
 /		
-/		If you wish to add another major requirement you will need to 
+/		If you wish to add another major requirement you will need to add these lines with the respective class
 /						IN THE HTML FILE, in the respective box
 /						<tr>
 /							<td>INSERT CATALOG NAME</td>
@@ -25,6 +25,19 @@
 /							document.getElementById("INSERT CATALOG NAME").style.backgroundColor = "rgb(46, 204, 113)";
 /						}
 /
+/		If you wish to remove another major requirement you will need to delete these lines with the respective class
+/						
+/						IN THE HTML FILE, in the respective box
+/						<tr>
+/							<td>CATALOG NAME</td>
+/							<td name="requirement" id="CATALOG NAME">NO!</td> 
+/						</tr>
+/						
+/						IN THE JS FILE, in the generate() function
+/						else if(x == "CATALOG NAME"){
+/							document.getElementById("CATALOG NAME").innerHTML = "YES!"; 
+/							document.getElementById("CATALOG NAME").style.backgroundColor = "rgb(46, 204, 113)";
+/						}
 */
 
 //These arrays hold the class list and the list of technical and nontechnical electives
