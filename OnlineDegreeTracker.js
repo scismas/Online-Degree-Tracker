@@ -283,7 +283,10 @@ function populate()
 	handleSpecialCases();
 	createCookie("cookieCourse", courses, 365);
 }
-
+/*
+/ handleSpecialCases() takes into the special cases involving specific requirements
+/ This allows the program to give priority to classes that match their requirement name
+*/
 function handleSpecialCases(){
 	
 	var temp; 
@@ -347,16 +350,18 @@ function handleSpecialCases(){
 /* 
 / generate() compares its input with the list of requirements
 / If the input matches the requirement, it will light up in its corresponding way
+/ Includes the use of booleans to check for double dips
+/ If the elective boolean remains zero then the course will get passed to the elective table
 */
 function generate(x){
 	var elective = 0;
- 	var one = 0;
-	var two = 0;
-	var three = 0;
-	var four = 0;
-	var five = 0;
-	var six = 0;
-	var seven = 0;
+ 	var ci3Double = 0;
+	var diversityDouble = 0;
+	var elsjDouble = 0;
+	var rtc2Double = 0;
+	var rtc3Double = 0;
+	var ethicsDouble = 0;
+	var socSciDouble = 0;
 	
 
 	//Major Requirements
@@ -546,33 +551,33 @@ function generate(x){
 		seven = 1;
 		}
 	
-	if((one + two + three + four + five + six + seven) >= 2)
+	if((ci3Double + diversityDouble + elsjDouble + rtc2Double + rtc3Double + ethicsDouble + socSciDouble) >= 2)
 		{
-			if(one == 1)
+			if(ci3Double == 1)
 			{
 				document.getElementById("CandI III").style.backgroundColor = "rgb(82, 179, 217)";
 			}
-			if(two == 1)
+			if(diversityDouble == 1)
 			{
 				document.getElementById("DIVERSITY").style.backgroundColor = "rgb(82, 179, 217)";
 			}
-			if(three == 1)
+			if(elsjDouble == 1)
 			{
 				document.getElementById("ELSJ").style.backgroundColor = "rgb(82, 179, 217)";
 			}
-			if(four == 1)
+			if(rtc2Double == 1)
 			{
 				document.getElementById("RTC II").style.backgroundColor = "rgb(82, 179, 217)";
 			}
-			if(five == 1)
+			if(rtc3Double == 1)
 			{
 				document.getElementById("RTC III").style.backgroundColor = "rgb(82, 179, 217)";
 			}
-			if(six == 1)
+			if(ethicsDouble == 1)
 			{
 				document.getElementById("ETHICS").style.backgroundColor = "rgb(82, 179, 217)";
 			}
-			if(seven == 1)
+			if(socSciDouble == 1)
 			{
 				document.getElementById("SOC SCI").style.backgroundColor = "rgb(82, 179, 217)";
 			}
@@ -616,7 +621,7 @@ function generate(x){
 		}
 	}
 	
-	//Checks for special cases
+	//Checks for special cases and then pushes the course to the specialCases array
 	if(amth106.indexOf(x) != -1 || chem11.indexOf(x) != -1 || math53.indexOf(x) != -1 || amth108.indexOf(x) != -1){
 		specialCases.push(x);
 		elective = 1;
