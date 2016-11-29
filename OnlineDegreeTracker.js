@@ -506,49 +506,49 @@ function generate(x){
 		document.getElementById("CandI III").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;
 		CheckCi3 = 1; 
-		one = 1;
+		ci3Double = 1;
 	}
 	if(diversity.indexOf(x) != -1 && CheckDiversity == 0){
 		document.getElementById("DIVERSITY").innerHTML= x;
 		document.getElementById("DIVERSITY").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1; 
 		CheckDiversity = 1; 
-		two = 1;
+		diversityDouble = 1;
 		}
 	if(elsj.indexOf(x) != -1 && CheckElsj == 0){
 		document.getElementById("ELSJ").innerHTML= x;
 		document.getElementById("ELSJ").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1; 
 		CheckElsj = 1; 
-		three = 1;
+		elsjDouble = 1;
 		}
 	if(rtc2.indexOf(x) != -1 && CheckRtc2 == 0){
 		document.getElementById("RTC II").innerHTML= x; 
 		document.getElementById("RTC II").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1; 
 		CheckRtc2 = 1; 
-		four = 1;
+		rtc2Double = 1;
 		}
 	if(rtc3.indexOf(x) != -1 && CheckRtc3 == 0){
 		document.getElementById("RTC III").innerHTML= x; 
 		document.getElementById("RTC III").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1; 
 		CheckRtc3 = 1; 
-		five = 1;
+		rtc3Double = 1;
 		}
 	if(ethics.indexOf(x) != -1 && CheckEthics == 0){
 		document.getElementById("ETHICS").innerHTML= x;
 		document.getElementById("ETHICS").style.backgroundColor = "rgb(46, 204, 113)"; 
 		elective = 1; 
 		CheckEthics = 1; 
-		six = 1;
+		ethicsDouble = 1;
 		}
 	if(socialScience.indexOf(x) != -1 && CheckSocialScience == 0){
 		document.getElementById("SOC SCI").innerHTML= x; 
 		document.getElementById("SOC SCI").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1; 
 		CheckSocialScience = 1; 
-		seven = 1;
+		socSciDouble = 1;
 		}
 	
 	if((ci3Double + diversityDouble + elsjDouble + rtc2Double + rtc3Double + ethicsDouble + socSciDouble) >= 2)
