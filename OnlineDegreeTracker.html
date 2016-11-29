@@ -3,8 +3,8 @@
 	AUTHORS: Eric Castronovo, Sabrina Cismas, Alan Nguyen
 
 	PURPOSE: 
-		This file contains the needed HTML code 
-
+		This file contains the needed HTML code that is needed for the structure of the OnlineDegreeTracker application
+		The file also references the needed CSS and JS files for the system to operate properly
 -->
 
 
@@ -19,11 +19,12 @@
 		<title>COEN Planning</title>
 	</head>
 	
-	
+	<!-- Allows us to grap cookies on loading as well as populate those classes and colors-->
 	<body onload="colorFill(); loadCookieArray(); populate()">
 		<h4>Online Degree Tracker<br>Designed for SCU COEN majors</h4>
 		<div class="outerboxtop">
 			<div class="boxFields">
+				<!-- Includes the input fields and buttons-->
 				<div class="InputForms">
 					<h5>Enter Class:</h5>
 					<form>
@@ -46,9 +47,10 @@
 		
 		<br><br><br><br><br>
 
-
+		
 		<h2>DEGREE PROGRESS</h2>
 		<h4>Major</h4>
+		<!-- Includes the Major Requirements in the main table of the application -->
 		<div class="outerbox">
 			<div class="box">
 
@@ -220,8 +222,8 @@
 		
 		
 			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		</table>
-		
+		</table>	
+		<!-- Includes the table the stores the requirements for core requirements -->
 		<h4>Core Curriculum</h4>
 			<div class = "outerbox">
 				<div class="box">
@@ -301,7 +303,7 @@
 	
 			<br><br><br><br><br><br><br>
 			
-			
+			<!-- Includes the table that is where the electives will populate -->
 			<h4>Electives</h4>
 			<div class = "outerboxbottom">
 				<div class="box">
