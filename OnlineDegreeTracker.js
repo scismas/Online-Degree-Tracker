@@ -23,6 +23,7 @@
 /						else if(x == "INSERT CATALOG NAME"){
 /							document.getElementById("INSERT CATALOG NAME").innerHTML = "YES!"; 
 /							document.getElementById("INSERT CATALOG NAME").style.backgroundColor = "rgb(46, 204, 113)";
+/							elective = 1;}
 /						}
 /
 /		If you wish to remove another major requirement you will need to delete these lines with the respective class
@@ -37,6 +38,7 @@
 /						else if(x == "CATALOG NAME"){
 /							document.getElementById("CATALOG NAME").innerHTML = "YES!"; 
 /							document.getElementById("CATALOG NAME").style.backgroundColor = "rgb(46, 204, 113)";
+/							elective = 1;}
 /						}
 */
 
