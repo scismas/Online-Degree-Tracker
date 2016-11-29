@@ -3,7 +3,7 @@
 /	AUTHORS: Eric Castronovo, Sabrina Cismas, Alan Nguyen
 /	
 /	PURPOSE: 
-/		This file contains the needed functionality for the OnlineDegreeTracker applicaiton to dynamically change based on user input.
+/		This file contains the needed functionality for the OnlineDegreeTracker application to dynamically change based on user input.
 /		In addition, this file contains lists of classes which satisfy specific SCU requirements that are stored in arrays.
 /		The file also includes the functions to help us with cookies.
 /
@@ -106,6 +106,7 @@ function clearCourses(){
 		
 		
 }
+
 /*
 / This function adds a space between the course and course number if the user did not include one
 */
@@ -135,6 +136,7 @@ function addSpace(x){
 		return copy;
 	}
 }
+
 /*
 / This function is called when the page is loaded and it fills in the table cells with their needed background colors
 */
@@ -150,6 +152,14 @@ function colorFill(){
 	}
 
 }
+
+/*
+/ removeThis() is called when the user presses Enter in the Remove Course box or presses the Remove Course button
+/ It santizes the user input by adding a white space if needed and converts the characters to uppercase
+/ It uses regex to determine if the user input was entered in the correct format
+/ The function will splice out the specified class and repopulates the webpage with the updated class list
+/ It will return "Cannot Remove" if the class was unable to be removed
+*/
 function removeThis(){
 	var spaced = addSpace(document.getElementById("removeMe").value);
 	var Sanitize2 = spaced;
@@ -176,7 +186,12 @@ function removeThis(){
 	}
 }
 
-//Would like case insenitive
+/*
+/ addCourse() is called when the user presses Enter in the Add Course box or presses the Add Course button
+/ It santizes the user input by adding a white space if needed and converts the characters to uppercase
+/ It uses regex to determine if the user input was entered in the correct format
+/ The function will push the specified class into the array and repopulates the webpage with the updated class list
+*/
 function addCourse(){
 	var spaced = addSpace(document.getElementById("input").value);
 	var Sanitize1 = spaced;
@@ -188,9 +203,6 @@ function addCourse(){
 		return;
 	}
 
-
-	// if input == regex string 
-	// alert ()
 	if(courses.indexOf(upperCase) != -1){
 		alert("This Course has Already Been Entered");
 		return;
@@ -199,7 +211,12 @@ function addCourse(){
 	populate();
 }
 
-
+/*
+/ The reset() function is used to clear the webpage and restart from the beginning.
+/ The variables to check for multi fulfilling classes are cleared.
+/ It will then loop through the document and reset the requirements field back to incomplete.
+/ Then the function clears the special cases and technical electives arrays
+*/
 function reset(){
 	CheckSocialScience = 0;
 	CheckEthics = 0;
@@ -226,6 +243,16 @@ function reset(){
  
 	
 }
+
+/*
+/ populate() will populate the entire online degree tracker with the user's classes
+/ It resets the arrays used to store technical electives and special cases
+/ It resets the variables used to check for multi fulfilling classes
+/ populate() will clear the elective section of the webpage
+/ Next it loops and generates the classes
+/ It handles the special cases
+/ Then creates a cookie based on the courses entered
+*/
 function populate()
 {
 	technicalElectives = [];
@@ -245,16 +272,14 @@ function populate()
 	var t = electives.length;
 	for(var j = 0; j < t; j++)
 	{
-		//document.getElementById("electiveTable").deleteRow(0);
 		document.getElementById("electiveRow").deleteCell(0);
 	}
 	electives = [];
-	//var x = document.getElementById("box"); <div id="box" style="border:1px solid black;width:150px;height:100px;overflow:auto"> 
-	//</div>
+
 	var arrayLength = courses.length;
-	//x.innerHTML = "";
-	for (var i = 0; i < arrayLength; i++) {
-		//x.innerHTML += courses[i] + "<br>";
+	
+	for (var i = 0; i < arrayLength; i++) 
+	{
 		generate(courses[i]);
 	}
 	handleSpecialCases();
@@ -336,6 +361,11 @@ function handleSpecialCases(){
 	}	
 }
 
+
+/* 
+/ generate() compares it's input with the list of requirements
+/ If the input matches the requirement, it will light up in its corresponding way
+*/
 function generate(x){
 	var elective = 0;
  	var one = 0;
@@ -346,6 +376,8 @@ function generate(x){
 	var six = 0;
 	var seven = 0;
 	
+
+	//Major Requirements
 	if(x == "ENGL 181"){ 
 		document.getElementById("ENGL 181").innerHTML = "YES!"; 
 		document.getElementById("ENGL 181").style.backgroundColor = "rgb(46, 204, 113)";
@@ -438,8 +470,6 @@ function generate(x){
 		document.getElementById("MATH 14").innerHTML = "YES!";
 		document.getElementById("MATH 14").style.backgroundColor = "rgb(46, 204, 113)";
 		elective = 1;}
-	
-	//Can be fulfilled with 
 	
 	else if(x == "PHYS 31"){
 		document.getElementById("PHYS 31").innerHTML = "YES!";
@@ -565,6 +595,8 @@ function generate(x){
 				document.getElementById("SOC SCI").style.backgroundColor = "rgb(82, 179, 217)";
 			}
 		}
+
+	//Checks the technical electives
 	if(upperDiv.indexOf(x)!= -1){
 		technicalElectives.push(x);
 		var techLength = technicalElectives.length;
@@ -602,16 +634,22 @@ function generate(x){
 		}
 	}
 	
+	//Checks for special cases
 	if(amth106.indexOf(x) != -1 || chem11.indexOf(x) != -1 || math53.indexOf(x) != -1 || amth108.indexOf(x) != -1){
 		specialCases.push(x);
 		elective = 1;
 	}
 	
+	//If input is an elective, add to elective table
 	if(elective == 0 )
 	{
 		fillTable(x);
 	}
 }
+
+/*
+/ Adds the input into the elective section
+*/
 function fillTable(x){
 	
 	electives.push(x);
@@ -621,68 +659,71 @@ function fillTable(x){
 	cell1.style.backgroundColor = "rgb(46, 204, 113)";
 }
 
+/*
+/ createCookie() takes a name, value, and days to live
+/ It will create a JSON string with the array entered
+/ Then sets a expiration date
+/ Formats the cookie with the information provided
+*/
 var createCookie = function(name, value, days) {
 		var expires;
-		
-		//Creates a JSON string based on the array entered
 		var string = JSON.stringify(value);
 		
-		//Sets the expiration date. A year in this case
-		if (days) {
+		if (days) 
+		{
 				var date = new Date();
 				date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
 				expires = "expires=" + date.toGMTString();
 		}
-		else {
+		else 
+		{
 				expires = "";
 		}
-		
-		//Formats the cookie
-		document.cookie = name + "=" + string + ";" + expires + ";path=/";
-
-
-		
+		document.cookie = name + "=" + string + ";" + expires + ";path=/";	
 }
+
+
+//Checks if cookie exists
+//Finds the start of the cookie
+//If no error in start of cookie
+//Skip the name section
+//Limits to the "string" part of cookie
+//Returns the string
 function getCookie(name) 
 {
-		//Checks if cookie exists
 		if (document.cookie.length > 0) 
 		{
-			//Finds the start of the cookie	
 			start = document.cookie.indexOf(name + "=");
-			
-			//If no error in start of cookie
 			if (start != -1) 
-			{	//Skip the name section
+			{	
 				start = start + name.length + 1;
-				
-				//Limits to the "string" part of cookie
 				end = document.cookie.indexOf(";", start);
 				if (end == -1) 
 				{
 					end = document.cookie.length;
 				}
-				
-				//Returns the string
 				return unescape(document.cookie.substring(start, end));
 			}
 		}
 		return "";
 }
 
+/*
+/ Loads the Cookie and places into the array
+/ If there is a cookie
+/ Parses the cookie into the course list, resets the page, and repopulate the classes
+*/
 function loadCookieArray()
 {
-	//If there is a cookie
 	if (document.cookie.length > 0)
-	{
-		//Parses the cookie into the course list, resets the page, and repopulate the classes
+	{	
 		courses = JSON.parse(getCookie("cookieCourse"));
 		reset();
 		populate();
 	}
 	return "";
-
 }
+
 
 //Detects the enter key
 function buttonPressAdd(e)
