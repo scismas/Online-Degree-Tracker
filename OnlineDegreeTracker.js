@@ -215,7 +215,7 @@ function reset(){
 	CheckMath53 = 0;
 	CheckAmth106 = 0;
 	CheckChem11 = 0;
-	doubledip=0;
+	doubledip = 0;
 	
 	
 	var x = document.getElementsByName("requirement");
@@ -269,25 +269,25 @@ function handleSpecialCases(){
 	var temp; 
 	if(specialCases.indexOf("AMTH 108") != -1){
 		document.getElementById("AMTH 108").innerHTML = "AMTH 108"; 
-		document.getElementById("AMTH 108").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("AMTH 108").style.backgroundColor = "rgb(46, 204, 113)";
 		//specialCases.splice("AMTH 108",1);
 		CheckAmth108 = 1;
 	}
 	if(specialCases.indexOf("AMTH 106") != -1){
 		document.getElementById("AMTH 106").innerHTML = "AMTH 106"; 
-		document.getElementById("AMTH 106").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("AMTH 106").style.backgroundColor = "rgb(46, 204, 113)";
 		//specialCases.splice("AMTH 106",1);
 		CheckAmth106 = 1;
 	}
 	if(specialCases.indexOf("MATH 53") != -1){
 		document.getElementById("MATH 53").innerHTML = "MATH 53"; 
-		document.getElementById("MATH 53").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("MATH 53").style.backgroundColor = "rgb(46, 204, 113)";
 		//specialCases.splice("MATH 53",1);
 		CheckMath53 = 1;
 	}
 	if(specialCases.indexOf("CHEM 11") != -1){
 		document.getElementById("CHEM 11").innerHTML = "CHEM 11"; 
-		document.getElementById("CHEM 11").style.backgroundColor = "rgb(66, 244, 146)";
+		document.getElementById("CHEM 11").style.backgroundColor = "rgb(46, 204, 113)";
 		//specialCases.splice("CHEM 11",1);
 		CheckChem11 = 1;
 	}
@@ -299,7 +299,7 @@ function handleSpecialCases(){
 		//alert( CheckAmth108 + ' ' + "AMTH 108" + ' ' + CheckAmth106 + ' '+"AMTH 106" + ' ' + CheckMath53 + ' '+"MATH 53" + ' ' + CheckChem11 + ' '+"Chem 11");
 		 if(chem11.indexOf(temp) != -1 && CheckChem11 == 0){
 			document.getElementById("CHEM 11").innerHTML= temp;
-			document.getElementById("CHEM 11").style.backgroundColor = "rgb(66, 244, 146)"; 
+			document.getElementById("CHEM 11").style.backgroundColor = "rgb(46, 204, 113)"; 
 			//elective = 1; 
 			CheckChem11 = 1;
 			//alert('a');
@@ -307,7 +307,7 @@ function handleSpecialCases(){
 			}	
 		else if(amth106.indexOf(temp) != -1 && CheckAmth106 == 0){
 			document.getElementById("AMTH 106").innerHTML = temp; 
-			document.getElementById("AMTH 106").style.backgroundColor = "rgb(66, 244, 146)";
+			document.getElementById("AMTH 106").style.backgroundColor = "rgb(46, 204, 113)";
 			//elective = 1; 
 			CheckAmth106 = 1;
 			//break;
@@ -316,7 +316,7 @@ function handleSpecialCases(){
 			
 		 else if(math53.indexOf(temp) != -1 && CheckMath53 == 0){
 			document.getElementById("MATH 53").innerHTML = temp;
-			document.getElementById("MATH 53").style.backgroundColor = "rgb(66, 244, 146)"; 
+			document.getElementById("MATH 53").style.backgroundColor = "rgb(46, 204, 113)"; 
 			//elective = 1; 
 			CheckMath53 = 1;
 			//break;
@@ -324,7 +324,7 @@ function handleSpecialCases(){
 			}
 		 else if(amth108.indexOf(temp) != -1 && CheckAmth108 == 0){
 			document.getElementById("AMTH 108").innerHTML = temp;
-			document.getElementById("AMTH 108").style.backgroundColor = "rgb(66, 244, 146)";
+			document.getElementById("AMTH 108").style.backgroundColor = "rgb(46, 204, 113)";
 			//elective = 1; 
 			CheckAmth108 = 1;
 			//break;
