@@ -6,8 +6,24 @@
 /		This file contains the needed functionality for the OnlineDegreeTracker application to dynamically change based on user input.
 /		In addition, this file contains lists of classes which satisfy specific SCU requirements that are stored in arrays.
 /		The file also includes the functions to help us with cookies.
-/
 /	
+/	MAINTENANCE INSTRUCTIONS:
+/
+/		If you wish add another core requirement this can easily be done by adding the corresponding course catalog number (Example "COEN 10",)
+/		into the respected requirement array.
+/		
+/		If you wish to add another major requirement you will need to 
+/						IN THE HTML FILE, in the respective box
+/						<tr>
+/							<td>INSERT CATALOG NAME</td>
+/							<td name="requirement" id="INSERT CATALOG NAME">NO!</td> 
+/						</tr>
+/						
+/						IN THE JS FILE, in the generate() function
+/						else if(x == "INSERT CATALOG NAME"){
+/							document.getElementById("INSERT CATALOG NAME").innerHTML = "YES!"; 
+/							document.getElementById("INSERT CATALOG NAME").style.backgroundColor = "rgb(46, 204, 113)";
+/						}
 /
 */
 
@@ -42,7 +58,6 @@ var CheckAmth106 = 0;
 var CI1 = ["ANTH 11A", "ARTH 11A", "ARTH 11H", "CLAS 11A", "ENGL 11A", "ENVS 11A", "HIST 11A", "HIST 11H", "ITAL 11A", "MUSC 11A", "PHIL 11A", "SOCI 11A", "THTR 11A", "WGST 11A"];
 var CI2 = ["ANTH 12A", "ARTH 12A","CLAS 12A","ENGL 12A","ENVS 12A","HIST 12A","HIST 12H","ITAL 12A","MUSC 12A","PHIL 12A","SOCI 12A","THTR 12A","WGST 12A"];
 var CI3 = ["TESP 133", "POLI 3", "ANTH 50", "ANTH 152", "ARTH 27", "ARTH 160", "ECON 134", "ENGL 153", "ENGL 156", "FREN 114", "HIST 92", "HIST 116S", "HIST 137", "HIST 142", "HIST 147B", "HIST 150", "MGMT 80", "MUSC 130", "POLI 2", "POLI 50", "POLI 137", "RSOC 136", "SPAN 112", "WGST 104", "WGST 122", "WGST 124", "WGST 126", "ANTH 156", "ANTH 159", "ANTH 172", "ANTH 181", "ANTH 184", "ANTH 185", "ANTH 186", "ANTH 187", "ANTH 188", "ARAB 137", "ARTH 24", "ARTH 25", "ARTH 26", "ARTH 152", "ARTH 161", "ARTH 162", "ARTH 163", "ARTH 164", "ARTH 170", "CLAS 60", "COMM 105A", "COMM 183A", "COMM 184A", "COMM 187A", "COMM 188A", "COMM 189A", "DANC 68", "ENGR 177", "ENGL 56", "ENGL 66", "ENGL 31A", "ENGL 120", "ENGL 157", "FREN 111", "FREN 112", "FREN 113", "FREN 174", "HIST 64", "HIST 91", "HIST 95", "HIST 102S", "HIST 104", "HIST 107", "HIST 112", "HIST 122", "HIST 136", "HIST 140S", "HIST 141", "HIST 143S", "HIST 144S", "HIST 145", "HIST 146A", "HIST 146B", "HIST 147A", "HIST 151", "HIST 152", "HIST 154B", "HIST 157", "HIST 161", "HIST 162", "HIST 163", "HIST 164S", "HIST 166", "MUSC 136", "POLI 126", "POLI 136", "POLI 140", "POLI 145", "POLI 148", "SOCI 134", "SOCI 135", "SOCI 138", "SPAN 137", "SPAN 147", "SPAN 149", "WGST 120", "WGST 123", "WGST 125", "WGST 128", "WGST 172", "WGST 175"];
-var coen = ["COEN 10", "COEN 11", "COEN 12", "COEN 19", "COEN 20", "COEN 21", "COEN 70", "COEN 122", "COEN 146", "COEN 171", "COEN 174", "COEN 175", "COEN 177", "COEN 179", "COEN 194", "COEN 195", "COEN 196"];
 var ctw1 = ["ENGL 1A", "ENGL 1H"]; 
 var ctw2 = ["ENGL 2A", "ENGL 2H", "PHIL 2A", "WGST 2A"]; 
 var diversity = ["TESP 64", "ANTH 157", "ARTH 143", "ARTH 185", "COMM 107A", "ENGL 38", "ENGL 67", "ENGL 125H", "ETHN 5", "ETHN 30", "ETHN 40", "ETHN 132", "ETHN 144", "ETHN 153", "ETHN 157", "ETHN 165", "ETHN 178", "HIST 178", "LBST 106", "MUSC 132", "POLI 153", "POLI 154", "PSYC 182", "SOCI 33", "SOCI 153", "WGST 34", "WGST 50", "WGST 115", "WGST 155", "WGST 156", "WGST 163", "ANTH 146", "ANTH 148", "ANTH 149", "ANTH 170", "ARTH 140", "ARTH 146", "COMM 121A", "COMM 164A", "COMM 168A", "DANC 62", "DANC 162", "DANC 66", "DANC 166", "ECON 166", "ENGL 31G", "ENGL 35", "ENGL 35G", "ENGL 36", "ENGL 39", "ENGL 68", "ENGL 69", "ENGL 79G", "ENGL 122", "ENGL 122AW", "ENGL 125", "ENGL 129", "ENGL 132G", "ENGL 135", "ENGL 136", "ENGL 138", "ENGL 152", "ETHN 10", "ETHN 20", "ETHN 35", "ETHN 36", "ETHN 41", "ETHN 50", "ETHN 51", "ETHN 65", "ETHN 70", "ETHN 95", "ETHN 96", "ETHN 120", "ETHN 123", "ETHN 125", "ETHN 130", "ETHN 134", "ETHN 135", "ETHN 139", "ETHN 141", "ETHN 142", "ETHN 145", "ETHN 149", "ETHN 152", "ETHN 154", "ETHN 155", "ETHN 156", "ETHN 160", "ETHN 161", "ETHN 162", "ETHN 163", "HIST 84", "HIST 153", "HIST 156A", "HIST 156B", "HIST 158", "HIST 172", "HIST 174", "HIST 177", "HIST 180", "HIST 181", "HIST 182", "HIST 183", "HIST 185", "HIST 187", "HIST 188S", "ITAL 185", "LEAD 10", "MUSC 20", "MUSC 134", "MUSC 196", "PHIL 70", "PHIL 156", "POLI 134", "POLI 171", "POLI 195DW", "PSYC 156", "PSYC 189", "PSYC 196", "SOCI 150", "SOCI 162", "SOCI 175", "SOCI 180", "SPAN 176", "THTR 65", "THTR 151", "THTR 161", "TESP 65", "WGST 14", "WGST 15", "WGST 51", "WGST 56", "WGST 57", "WGST 101", "WGST 110", "WGST 111", "WGST 112", "WGST 113", "WGST 114", "WGST 116", "WGST 117", "WGST 118", "WGST 134", "WGST 134AW", "WGST 136", "WGST 138", "WGST 144", "WGST 164", "WGST 173", "WGST 174", "WGST 180", "WGST 188"];
@@ -318,24 +333,23 @@ function handleSpecialCases(){
 			document.getElementById("CHEM 11").innerHTML= temp;
 			document.getElementById("CHEM 11").style.backgroundColor = "rgb(46, 204, 113)"; 
 			CheckChem11 = 1;
-			}	
+			}
+		else if(amth108.indexOf(temp) != -1 && CheckAmth108 == 0){
+			document.getElementById("AMTH 108").innerHTML = temp;
+			document.getElementById("AMTH 108").style.backgroundColor = "rgb(46, 204, 113)"; 
+			CheckAmth108 = 1;
+			}
 		else if(amth106.indexOf(temp) != -1 && CheckAmth106 == 0){
 			document.getElementById("AMTH 106").innerHTML = temp; 
 			document.getElementById("AMTH 106").style.backgroundColor = "rgb(46, 204, 113)";
 			CheckAmth106 = 1;
-			}
-			
+			}	
 		 else if(math53.indexOf(temp) != -1 && CheckMath53 == 0){
 			document.getElementById("MATH 53").innerHTML = temp;
 			document.getElementById("MATH 53").style.backgroundColor = "rgb(46, 204, 113)"; 
 			CheckMath53 = 1;
 			}
-		 else if(amth108.indexOf(temp) != -1 && CheckAmth108 == 0){
-			document.getElementById("AMTH 108").innerHTML = temp;
-			document.getElementById("AMTH 108").style.backgroundColor = "rgb(46, 204, 113)"; 
-			CheckAmth108 = 1;
-
-			}	
+		 	
 		else if (temp == "CHEM 11" || temp == "MATH 53" || temp == "AMTH 106" || temp == "AMTH 108"){
 				continue;
 		}
